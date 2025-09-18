@@ -1,4 +1,4 @@
-# Nombre del laboratorio 
+# Nombre del laboratorios
 
 ## Objetivo de la práctica:
 Al finalizar la práctica, serás capaz de:
