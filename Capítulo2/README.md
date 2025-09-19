@@ -1,10 +1,17 @@
-## 🎯 Práctica 2.1: Limpieza, Transformación y *Feature Engineering*
+### 🎯 Práctica 2.1: Limpieza, Transformación y *Feature Engineering*
 
 ### **Objetivos**
 
   * Comprender y aplicar técnicas de **limpieza de datos** para manejar valores nulos y atípicos.
   * Realizar **transformaciones** esenciales como el escalado de datos numéricos y la codificación de variables categóricas.
   * Crear nuevas variables (*features*) a través del ***Feature Engineering*** para mejorar el rendimiento de los modelos.
+
+**Duración aproximada:**
+- 60 minutos.
+
+**Tabla de ayuda:**
+
+Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
 ### **1. Limpieza de Datos: Nulos y *Outliers***
 
@@ -164,13 +171,20 @@ df_reto = pd.DataFrame(datos_reto)
 
 -----
 
-## 📊 Práctica 2.2: Análisis Exploratorio y Preparación de Datos
+### 📊 Práctica 2.2: Análisis Exploratorio y Preparación de Datos
 
 ### **Objetivos**
 
   * Realizar un **análisis exploratorio de datos (EDA)** utilizando visualizaciones.
   * Comprender la importancia de dividir los datos en conjuntos de **entrenamiento y prueba**.
   * Conocer el concepto de **validación cruzada** para evaluar modelos de manera robusta.
+
+**Duración aproximada:**
+- 60 minutos.
+
+**Tabla de ayuda:**
+
+Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
 ### **1. Análisis Exploratorio con Visualizaciones**
 
