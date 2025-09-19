@@ -167,6 +167,8 @@ ventas_df['GananciaNeta'] = ventas_df['VentaTotal'] * 0.20
 
 # Tu código aquí
 ```
+### Resultado esperado
+![imagen resultado](../images/Img1.1.jpg)
 
 -----
 
@@ -276,3 +278,6 @@ Crea un **gráfico de barras** utilizando Seaborn para mostrar la `venta total p
 
 # Tu código aquí
 ```
+
+### Resultado esperado
+![imagen resultado](../images/Img1.2.jpg)
