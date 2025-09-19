@@ -1,13 +1,3 @@
-He reformateado el texto a un formato Markdown estándar y claro para que el código se muestre correctamente en GitHub. Los títulos, subtítulos, listas y bloques de código están ahora correctamente estructurados para una fácil lectura y copia.
-
------
-
-# 🤖 Preprocesamiento de Datos y Análisis Exploratorio
-
-¡Bienvenido a la segunda práctica\! Aquí te centrarás en los pasos cruciales para preparar los datos antes de construir un modelo de *machine learning*.
-
------
-
 ## 🎯 Práctica 2.1: Limpieza, Transformación y *Feature Engineering*
 
 ### **Objetivos**
