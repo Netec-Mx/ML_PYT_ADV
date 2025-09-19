@@ -168,7 +168,8 @@ df_reto = pd.DataFrame(datos_reto)
 
 # Tu código aquí
 ```
-
+### Resultado esperado
+![imagen resultado](../images/Img2.1.jpg)
 -----
 
 ### 📊 Práctica 2.2: Análisis Exploratorio y Preparación de Datos
@@ -266,3 +267,5 @@ print("Forma del conjunto de prueba (X_test):", X_test.shape)
 
 # Tu código aquí
 ```
+### Resultado esperado
+![imagen resultado](../images/Img2.2.jpg)
