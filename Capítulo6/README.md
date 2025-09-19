@@ -10,7 +10,10 @@
 
 **Duración aproximada:**
 - 60 minutos.
------
+
+**Tabla de ayuda:**
+
+Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
 ### **1. Introducción a *Frameworks* Clave: TensorFlow y Keras**
 
