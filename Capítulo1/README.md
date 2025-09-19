@@ -1,4 +1,4 @@
-## 🎯 Práctica 1.1: Bases de Python y Librerías Esenciales
+### 🎯 Práctica 1.1: Bases de Python y Librerías Esenciales
 
 ### **Objetivos**
 
@@ -6,6 +6,13 @@
   * Repasar las **estructuras de datos básicas de Python**.
   * Comprender y usar la librería **NumPy** para operaciones numéricas eficientes.
   * Utilizar la librería **Pandas** para la manipulación y el análisis de datos.
+
+**Duración aproximada:**
+- 60 minutos.
+
+**Tabla de ayuda:**
+
+Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
 ### **1. Introducción al Entorno de Trabajo: Google Colab**
 
@@ -163,7 +170,7 @@ ventas_df['GananciaNeta'] = ventas_df['VentaTotal'] * 0.20
 
 -----
 
-## 📈 Práctica 1.2: Visualización con Matplotlib y Seaborn
+### 📈 Práctica 1.2: Visualización con Matplotlib y Seaborn
 
 ### **Objetivos**
 
@@ -171,6 +178,13 @@ ventas_df['GananciaNeta'] = ventas_df['VentaTotal'] * 0.20
   * Aprender a crear gráficos básicos con **Matplotlib**.
   * Usar **Seaborn** para crear gráficos más avanzados y estéticos.
   * Analizar los datos de un `DataFrame` a través de la visualización.
+
+**Duración aproximada:**
+- 60 minutos.
+
+**Tabla de ayuda:**
+
+Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
 ### **1. Introducción a la Visualización de Datos**
 
