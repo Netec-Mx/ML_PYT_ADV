@@ -244,3 +244,5 @@ print(red_neuronal.predecir(X_train).round(2))
 
 # Tu código aquí
 ```
+### Resultado esperado
+![imagen resultado](../images/Img6.jpg)
