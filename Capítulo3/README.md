@@ -229,6 +229,9 @@ Es normal que las predicciones en los ejercicios de Árbol de Decisión, k-NN y 
 
 Cuando un modelo se entrena y luego se le pide que prediga una muestra que ya ha visto, lo más probable es que la clasifique correctamente, produciendo el valor esperado.
 
+### Resultado esperado
+![imagen resultado](../images/Img3.1.jpg)
+
 ### **Práctica 3.2: Evaluación e Interpretación de Modelos**
 
 **Objetivos de la Práctica** 🎯
@@ -374,3 +377,6 @@ print(f"- Por cada metro cuadrado adicional, el precio aumenta en ${coeficiente:
 
 # Tu código aquí
 ```
+
+### Resultado esperado
+![imagen resultado](../images/Img3.2.jpg)
