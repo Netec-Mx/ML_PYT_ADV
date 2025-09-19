@@ -7,7 +7,12 @@
   * Explorar modelos de clasificación más avanzados como **Árboles de Decisión**, **k-NN** y **SVM**.
   * Entrenar, predecir y evaluar el rendimiento de los modelos.
 
------
+**Duración aproximada:**
+- 60 minutos.
+
+**Tabla de ayuda:**
+
+Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
 ### **1. Introducción a Scikit-learn**
 
@@ -232,7 +237,12 @@ Cuando un modelo se entrena y luego se le pide que prediga una muestra que ya ha
   * Aprender a calcular y usar métricas como **`accuracy`**, **`precision`**, **`recall`**, **`F1-score`**, **`R²`**, **`MAE`** y **`MSE`**.
   * Realizar una **interpretación básica** de los resultados de un modelo de regresión lineal.
 
------
+**Duración aproximada:**
+- 60 minutos.
+
+**Tabla de ayuda:**
+
+Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
 ### **1. Métricas de Evaluación**
 
