@@ -152,3 +152,5 @@ modelo_cnn_reto = keras.Sequential([
 
 # No olvides compilar y entrenar el nuevo modelo y comparar sus resultados con el modelo anterior.
 ```
+### Resultado esperado
+![imagen resultado](../images/Img7.jpg)
