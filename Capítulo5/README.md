@@ -1,41 +1,188 @@
-# Nombre del laboratorio 
+### 🚀 Práctica 5: Despliegue y Mantenimiento de Modelos
 
-## Objetivo de la práctica:
-Al finalizar la práctica, serás capaz de:
-- Objetivo1
-- Objetivo2
-- Objetivo3
+¡Bienvenido a la última práctica\! Aquí aprenderás los fundamentos para llevar un modelo de *machine learning* desde el entrenamiento a la producción.
 
-## Objetivo Visual 
-Crear un diagrama o imagen que resuma las actividades a realizar, un ejemplo es la siguiente imagen. 
+**Objetivos de la Práctica** 🎯
 
-![diagrama1](../images/img1.png)
+  * **Persistir modelos** en memoria para su uso inmediato con `Joblib` y `Pickle`.
+  * Comprender la **lógica de una API** para un modelo sin necesidad de un servidor externo.
+  * Explorar cómo crear una **interfaz de usuario** simple para un modelo.
 
-## Duración aproximada:
-- xx minutos.
+-----
 
-## Tabla de ayuda:
-Agregar una tabla con la información que pueda requerir el participante durante el laboratorio, como versión de software, IPs de servers, usuarios y credenciales de acceso.
-| Contraseña | Correo | Código |
-| --- | --- | ---|
-| Netec2024 | edgardo@netec.com | 123abc |
+### **1. Persistencia de Modelos en Memoria**
 
-## Instrucciones 
-<!-- Proporciona pasos detallados sobre cómo configurar y administrar sistemas, implementar soluciones de software, realizar pruebas de seguridad, o cualquier otro escenario práctico relevante para el campo de la tecnología de la información -->
-### Tarea 1. Descripción de la tarea a realizar.
-Paso 1. Debe de relatar el instructor en verbo infinito, claro y conciso cada actividad para ir construyendo paso a paso en el objetivo de la tarea.
+La **persistencia** te permite guardar un modelo entrenado para usarlo después, sin tener que volver a entrenarlo. En este ejercicio, simularemos el proceso guardando el modelo en un búfer de memoria (`BytesIO`) en lugar de en un archivo físico.
 
-Paso 2. <!-- Añadir instrucción -->
+#### **Ejercicio:**
 
-Paso 3. <!-- Añadir instrucción -->
+Entrena un modelo y luego guárdalo y cárgalo de un búfer de memoria usando `Joblib`.
 
-### Tarea 2. Descripción de la tarea a realizar.
-Paso 1. Debe de relatar el instructor en verbo infinito, claro y conciso cada actividad para ir construyendo paso a paso en el objetivo de la tarea.
+```python
+import pandas as pd
+import joblib
+import io
+from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
 
-Paso 2. <!-- Añadir instrucción -->
+# 1. Entrenar el modelo
+iris = load_iris()
+X, y = iris.data, iris.target
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
-Paso 3. <!-- Añadir instrucción -->
+modelo = LogisticRegression(max_iter=200)
+modelo.fit(X_train, y_train)
 
-### Resultado esperado
-En esta sección se debe mostrar el resultado esperado de nuestro laboratorio
-![imagen resultado](../images/img3.png)
+# 2. Guardar el modelo en un búfer de memoria
+buffer_modelo = io.BytesIO()
+joblib.dump(modelo, buffer_modelo)
+
+# 3. Cargar el modelo desde el búfer
+buffer_modelo.seek(0) # Mover el cursor al inicio del búfer
+modelo_cargado = joblib.load(buffer_modelo)
+print("Modelo guardado y cargado exitosamente de la memoria.")
+
+# 4. Usar el modelo cargado para hacer una predicción
+prediccion = modelo_cargado.predict(X_test[0:1])
+print(f"Predicción del modelo cargado para el primer ejemplo de prueba: {prediccion[0]}")
+print(f"Valor real: {y_test[0]}")
+```
+
+**Reto:** Utiliza la librería `pickle` para guardar y cargar el modelo del ejercicio a un búfer de memoria.
+
+```python
+# Pista de código para el reto:
+import pickle
+# Pista: Usa el mismo flujo de trabajo: dump -> seek -> load
+
+# Tu código aquí
+```
+
+-----
+
+### **2. Lógica de una API para un Modelo**
+
+Una **API (Interfaz de Programación de Aplicaciones)** permite que los programas se comuniquen. La lógica de una API que usa un modelo de *machine learning* es simple: recibe datos, los procesa, hace una predicción y devuelve un resultado. Puedes simular esta lógica sin un servidor real.
+
+#### **Ejercicio:**
+
+Simula un *endpoint* de una API que recibe datos en formato `JSON` y usa el modelo para hacer una predicción.
+
+```python
+import numpy as np
+import joblib
+import io
+from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# --- Código del Ejercicio 1 para hacer el modelo disponible ---
+iris = load_iris()
+X, y = iris.data, iris.target
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+modelo = LogisticRegression(max_iter=200)
+modelo.fit(X_train, y_train)
+
+# Guardar el modelo en un búfer de memoria para simular la persistencia
+buffer_modelo_api = io.BytesIO()
+joblib.dump(modelo, buffer_modelo_api)
+buffer_modelo_api.seek(0)
+# --- Fin del código de persistencia ---
+
+# Ahora, cargamos el modelo desde el búfer para la lógica de la API
+modelo_api = joblib.load(buffer_modelo_api)
+
+# Simular una solicitud de datos en formato JSON
+# Este JSON contiene las 4 características de la flor
+datos_simulados = {
+    "features": [5.1, 3.5, 1.4, 0.2]
+}
+
+# Lógica del endpoint de la API
+def predecir_desde_json(datos_json):
+    # Convertir la lista de features a un array de numpy
+    datos_np = np.array(datos_json['features']).reshape(1, -1)
+
+    # Hacer la predicción
+    prediccion = modelo_api.predict(datos_np)
+
+    # Devolver el resultado como un diccionario (simulando JSON)
+    return {"prediction": int(prediccion[0])}
+
+# Probar la función de la API
+respuesta = predecir_desde_json(datos_simulados)
+print("Respuesta de la API simulada:")
+print(respuesta)
+```
+
+**Reto:** Modifica la función `predecir_desde_json` para que, en lugar de un diccionario, devuelva un mensaje de texto.
+
+```python
+# Pista de código para el reto:
+# Pista: Convierte la predicción numérica a una etiqueta de texto (ej. "setosa").
+
+# Tu código aquí
+```
+
+-----
+
+### **3. Interfaz de Usuario Simple**
+
+Las interfaces de usuario interactivas permiten que las personas interactúen con un modelo de forma sencilla. Puedes simular la lógica de una interfaz simple usando entradas y salidas de texto en el notebook.
+
+#### **Ejercicio:**
+
+Simula una interfaz de usuario que le pida datos al usuario, los use para predecir con el modelo y muestre el resultado.
+
+```python
+import numpy as np
+import joblib
+import io
+from sklearn.linear_model import LogisticRegression
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+
+# --- Código para hacer el modelo disponible ---
+iris = load_iris()
+X, y = iris.data, iris.target
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+modelo = LogisticRegression(max_iter=200)
+modelo.fit(X_train, y_train)
+
+# Guardar el modelo en un búfer de memoria para simular la persistencia
+buffer_modelo_ui = io.BytesIO()
+joblib.dump(modelo, buffer_modelo_ui)
+buffer_modelo_ui.seek(0)
+# --- Fin del código de persistencia ---
+
+# Ahora, cargamos el modelo desde el búfer para la lógica de la UI
+modelo_ui = joblib.load(buffer_modelo_ui)
+
+# Simular la interacción con el usuario (ej. como en Streamlit)
+print("--- Clasificador de Flores Iris ---")
+print("Por favor, ingresa las 4 medidas de la flor:")
+sepal_length = float(input("Largo del sépalo: "))
+sepal_width = float(input("Ancho del sépalo: "))
+petal_length = float(input("Largo del pétalo: "))
+petal_width = float(input("Ancho del pétalo: "))
+
+# Preparar los datos y hacer la predicción
+datos_input = np.array([[sepal_length, sepal_width, petal_length, petal_width]])
+prediccion_ui = modelo_ui.predict(datos_input)
+
+# Mapear la predicción numérica a una etiqueta de texto
+etiquetas = load_iris().target_names
+resultado_ui = etiquetas[prediccion_ui[0]]
+
+print(f"\nEl modelo predice que la flor es: {resultado_ui}")
+```
+
+**Reto:** Agrega una validación al código para que si el usuario ingresa un valor negativo, se le muestre un mensaje de error en lugar de hacer la predicción.
+
+```python
+# Pista de código para el reto:
+# Pista: Usa una sentencia `if` o un bloque `try-except` para verificar la entrada.
+
+# Tu código aquí
+```
