@@ -4,7 +4,7 @@
 
 -----
 
-### **Objetivos de la Práctica** 🎯
+**Objetivos de la Práctica** 🎯
 
   * Comprender las técnicas de **preprocesamiento** para datos no supervisados.
   * Aplicar los principales algoritmos de **clustering** y de **reducción de dimensionalidad**.
