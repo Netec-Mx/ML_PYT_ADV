@@ -2,7 +2,6 @@
 
 ¡Bienvenido a la práctica sobre el aprendizaje no supervisado\! Aquí exploraremos cómo descubrir patrones ocultos en los datos sin la ayuda de etiquetas.
 
------
 
 **Objetivos de la Práctica** 🎯
 
@@ -11,7 +10,12 @@
   * Usar métodos para la **detección de anomalías**.
   * Evaluar y validar los resultados de los modelos no supervisados utilizando métricas clave.
 
------
+**Duración aproximada:**
+- 90 minutos.
+
+**Tabla de ayuda:**
+
+Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
 ### **1. Preprocesamiento Avanzado y Estructura de Datos**
 
