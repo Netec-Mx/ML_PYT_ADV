@@ -191,3 +191,5 @@ print(f"\nEl modelo predice que la flor es: {resultado_ui}")
 
 # Tu código aquí
 ```
+### Resultado esperado
+![imagen resultado](../images/Img5.jpg)
