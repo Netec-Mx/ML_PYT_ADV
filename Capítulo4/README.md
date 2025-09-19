@@ -242,3 +242,5 @@ print(f"Coeficiente de Silueta promedio: {silueta_promedio:.2f}")
 # Etiqueta de nuevo los datos
 # Vuelve a calcular la métrica
 ```
+### Resultado esperado
+![imagen resultado](../images/Img4.jpg)
