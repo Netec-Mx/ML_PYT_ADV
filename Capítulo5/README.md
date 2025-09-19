@@ -8,7 +8,12 @@
   * Comprender la **lógica de una API** para un modelo sin necesidad de un servidor externo.
   * Explorar cómo crear una **interfaz de usuario** simple para un modelo.
 
------
+**Duración aproximada:**
+- 60 minutos.
+
+**Tabla de ayuda:**
+
+Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
 ### **1. Persistencia de Modelos en Memoria**
 
