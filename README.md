@@ -14,13 +14,29 @@ Cada uno de estos laboratorios están diseñados para ofrecerte una experiencia 
     - **Descripción**: xxx.
     - ⏱️ **Duración estimada**: xx min.
 
-### [Práctica 2. Nombre de la práctica](./Capítulo2)
+### [Práctica 2. Nombre de la práctica](Capítulo2)
     - **Descripción**: xxx.
     - ⏱️ **Duración estimada**: xx min.
 
-### [Práctica 3. Nombre de la práctica](./Capítulo3.md)
+### [Práctica 3. Nombre de la práctica](Capítulo3)
     - **Descripción**: xxx.
     - ⏱️**Duración estimada**: xx min.
+
+### [Práctica 4. Nombre de la práctica](Capítulo4) 
+    - **Descripción**: xxx.
+    - ⏱️ **Duración estimada**: xx min.
+
+### [Práctica 5. Nombre de la práctica](Capítulo5)
+    - **Descripción**: xxx.
+    - ⏱️ **Duración estimada**: xx min.
+
+### [Práctica 6. Nombre de la práctica](Capítulo6)
+    - **Descripción**: xxx.
+    - ⏱️**Duración estimada**: xx min.
+
+### [Práctica 7. Nombre de la práctica](Capítulo7)
+    - **Descripción**: xxx.
+    - ⏱️ **Duración estimada**: xx min.
 
 
 ---
