@@ -10,11 +10,11 @@ Bienvenido a la **plataforma de laboratorios** del curso **Machine Learning Pyth
 
 Cada uno de estos laboratorios están diseñados para ofrecerte una experiencia práctica. Haz clic en los enlaces para comenzar.
 
-### [Práctica 1. Nombre de la práctica](./Capítulo1.md) 
+### [Práctica 1. Nombre de la práctica](Capítulo1) 
     - **Descripción**: xxx.
     - ⏱️ **Duración estimada**: xx min.
 
-### [Práctica 2. Nombre de la práctica](./Capítulo2.md)
+### [Práctica 2. Nombre de la práctica](./Capítulo2)
     - **Descripción**: xxx.
     - ⏱️ **Duración estimada**: xx min.
 
