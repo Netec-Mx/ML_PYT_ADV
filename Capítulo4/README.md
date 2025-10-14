@@ -1,4 +1,4 @@
-### 🕵️ Práctica 4.0: Fundamentos de Aprendizaje No Supervisado
+### 🕵️ Práctica 4: Fundamentos de Aprendizaje No Supervisado
 
 ¡Bienvenido a la práctica sobre el aprendizaje no supervisado\! Aquí exploraremos cómo descubrir patrones ocultos en los datos sin la ayuda de etiquetas.
 
