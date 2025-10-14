@@ -14,14 +14,41 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
    - **Descripción**: Familiarizarte con el entorno de Google Colab y repasar las estructuras de datos básicas de Python, comprendiendo y aplicando las librerías NumPy y Pandas para realizar operaciones numéricas eficientes y analizar datos de forma efectiva.
    - ⏱️ **Duración estimada**: 60 min.
 
-### [Práctica 2. Nombre de la práctica](./Laboratorio_2.md)
-   - **Descripción**: xxx.
-   - ⏱️ **Duración estimada**: xx min.
+### [Práctica 1.2: Visualización con Matplotlib y Seaborn](Capítulo1/README2.md) 
+   - **Descripción**: Comprender la importancia de la visualización de datos y aprender a crear gráficos con Matplotlib y Seaborn para representar y analizar de forma visual y efectiva la información contenida en un DataFrame.nalizar datos de forma efectiva.
+   - ⏱️ **Duración estimada**: 60 min.
 
-### [Práctica 3. Nombre de la práctica](./Laboratorio_3.md)
-   - **Descripción**: xxx.
-   - ⏱️**Duración estimada**: xx min.
+### [Práctica 2.1: Limpieza, Transformación y Feature Engineering](Capítulo2/README.md) 
+   - **Descripción**: Aplicar técnicas de limpieza y transformación de datos para manejar valores nulos, escalar y codificar variables, creando nuevas características mediante Feature Engineering que mejoren el rendimiento de los modelos.
+   - ⏱️ **Duración estimada**: 60 min.
 
+### [Práctica 2.2: Análisis Exploratorio y Preparación de Datos](Capítulo2/README2.md) 
+   - **Descripción**: Realizar un análisis exploratorio de datos mediante visualizaciones y comprender la importancia de dividir los datos en entrenamiento y prueba, aplicando validación cruzada para evaluar los modelos de forma robusta.
+   - ⏱️ **Duración estimada**: 60 min.
+
+### [Práctica 3.1: Modelos de Machine Learning Fundamentales](Capítulo3/README.md) 
+   - **Descripción**: Conocer la librería Scikit-learn y aplicar modelos de regresión y clasificación, incluyendo técnicas avanzadas como Árboles de Decisión, k-NN y SVM, para entrenar, predecir y evaluar el rendimiento de los modelos de machine learning.
+   - ⏱️ **Duración estimada**: 60 min.
+
+### [Práctica 3.2: Evaluación e Interpretación de Modelos](Capítulo3/README2.md) 
+   - **Descripción**: Comprender y aplicar las principales métricas de evaluación para modelos de regresión y clasificación, como accuracy, precision, recall, F1-score, R², MAE y MSE, interpretando los resultados de forma básica en un modelo de regresión lineal.
+   - ⏱️ **Duración estimada**: 60 min.
+
+### [Práctica 4: Fundamentos de Aprendizaje No Supervisado](Capítulo4/README.md) 
+   - **Descripción**: Comprender y aplicar técnicas de preprocesamiento y algoritmos de machine learning no supervisado, incluyendo clustering, reducción de dimensionalidad y detección de anomalías, evaluando los resultados con métricas clave.
+   - ⏱️ **Duración estimada**: 90 min.
+
+### [Práctica 5: Despliegue y Mantenimiento de Modelos](Capítulo5/README.md) 
+   - **Descripción**: Persistir modelos en memoria con Joblib y Pickle para su uso inmediato, comprender la lógica de una API sin servidor y explorar la creación de una interfaz de usuario simple para interactuar con un modelo.
+   - ⏱️ **Duración estimada**: 60 min.
+
+### [Práctica 6: Introducción a Redes Neuronales](Capítulo6/README.md) 
+   - **Descripción**: Conocer los fundamentos del Deep Learning y sus principales frameworks, TensorFlow y Keras, comprendiendo el funcionamiento de las neuronas artificiales, las funciones de activación y costo, la retropropagación y la implementación de una red neuronal simple con NumPy.
+   - ⏱️ **Duración estimada**: 60 min.
+
+### [Práctica 7: Construcción y Aplicaciones de Redes Neuronales](Capítulo7/README.md) 
+   - **Descripción**: Comprender el diseño y entrenamiento de redes neuronales para un rendimiento óptimo, y aplicar los fundamentos de las Redes Neuronales Convolucionales (CNN) en visión por computadora, explorando cómo las convoluciones extraen características de las imágenes.
+   - ⏱️ **Duración estimada**: 60 min.
 ---
 
 ## 📬 **Contacto y más información**
