@@ -1,34 +1,36 @@
-### 🎯 Práctica 1.1: Bases de Python y Librerías Esenciales
+# Práctica 1.1. Bases de Python y librerías esenciales
 
-### **Objetivos**
-
+## Objetivos
+Al finalizar la práctica, serás capaz de:
   * Familiarizarte con el entorno de **Google Colab**.
   * Repasar las **estructuras de datos básicas de Python**.
   * Comprender y usar la librería **NumPy** para operaciones numéricas eficientes.
   * Utilizar la librería **Pandas** para la manipulación y el análisis de datos.
 
-**Duración aproximada:**
+**Duración aproximada**
 - 60 minutos.
 
-**Tabla de ayuda:**
+**Tabla de ayuda**
 
-Para la ejecución del código ingresar a https://colab.research.google.com/ 
+Para la ejecución del código, ingresa a https://colab.research.google.com/ 
 
-### **1. Introducción al Entorno de Trabajo: Google Colab**
+## Instrucciones
 
-**Google Colab** es un entorno de cuadernos de Jupyter que funciona en la nube. Te permite escribir y ejecutar código Python directamente en tu navegador. Una de sus mayores ventajas es que proporciona acceso gratuito a **GPUs**, lo cual es fundamental para el *deep learning*.
+### Tarea 1. Introducción al entorno de trabajo: Google Colab
 
-#### **Tutorial Básico de Colab**
+**Google Colab** es un entorno de cuadernos de Jupyter que funciona en la nube. Te permite escribir y ejecutar código Python directamente en tu navegador. Una de sus mayores ventajas es que proporciona acceso gratuito a **GPU**, lo cual es fundamental para el *deep learning*.
 
-1.  **Crea un Nuevo Cuaderno**: Ve a [colab.research.google.com](https://colab.research.google.com) y haz clic en `Archivo` \> `Nuevo cuaderno`.
-2.  **Celdas de Código y Texto**: Los cuadernos se componen de **celdas de código** (para escribir Python) y **celdas de texto** (para añadir explicaciones en formato Markdown).
-3.  **Conexión y GPU**: En la esquina superior derecha, puedes ver el estado de tu conexión. Para activar la GPU, ve a `Entorno de ejecución` \> `Cambiar tipo de entorno de ejecución` y selecciona **GPU**.
-4.  **Gestión de Archivos**: Sube y gestiona archivos desde el panel izquierdo (icono de la carpeta 📂).
-5.  **Colaboración**: Haz clic en `Compartir` para trabajar en equipo en el mismo cuaderno.
+**Paso 1.** Crea un nuevo cuaderno
+Dirígete a [colab.research.google.com](https://colab.research.google.com) y haz clic en `Archivo` \> `Nuevo cuaderno`.
+Los cuadernos se componen de **celdas de código** (para escribir Python) y **celdas de texto** (para añadir explicaciones en formato Markdown).
 
-#### **Ejercicio**
+**Paso 2.** En la esquina superior derecha, puedes ver el estado de tu conexión. Para activar la GPU, ve a `Entorno de ejecución` \> `Cambiar tipo de entorno de ejecución` y selecciona **GPU**.
 
-¡Ejecuta la siguiente celda de código en Colab\!
+**Paso 3.** Sube y gestiona archivos desde el panel izquierdo (icono de la carpeta 📂).
+
+**Paso 4.** Haz clic en `Compartir` para trabajar en equipo en el mismo cuaderno.
+
+**Paso 5.** Ejecuta la siguiente celda de código en Colab\.
 
 ```python
 print("¡Hola! Bienvenido a tu primera práctica en Google Colab.")
@@ -36,11 +38,11 @@ print("¡Hola! Bienvenido a tu primera práctica en Google Colab.")
 
 -----
 
-### **2. Repaso de Estructuras Básicas en Python**
+### Tarea 2. Repaso de estructuras básicas en Python
 
-Antes de sumergirnos en el análisis de datos, es crucial repasar las estructuras básicas de Python que usaremos constantemente.
+Antes de sumergirte en el análisis de datos, es crucial repasar las estructuras básicas de Python que usarás constantemente.
 
-#### **Variables y Tipos de Datos**
+#### **Variables y tipos de datos**
 
 Python maneja varios tipos de datos como **enteros** (`int`), **decimales** (`float`), **cadenas** (`str`) y **booleanos** (`bool`).
 
@@ -58,9 +60,9 @@ precio_entero = int(precio)
 print(f"El precio como entero es: {precio_entero}")
 ```
 
-#### **Colecciones de Datos**
+#### **Colecciones de datos**
 
-| Estructura | Descripción | Mutabilidad | ¿Permite Duplicados? |
+| Estructura | Descripción | Mutabilidad | ¿Permite duplicados? |
 | :--- | :--- | :--- | :--- |
 | **Listas** | Colección ordenada de elementos. | Mutable | Sí |
 | **Tuplas** | Colección ordenada de elementos. | Inmutable | Sí |
@@ -84,9 +86,7 @@ inventario_set = {"Laptop", "Teclado", "Mouse", "Laptop"}
 print(f"Set sin duplicados: {inventario_set}")
 ```
 
-#### **Reto**
-
-Crea una lista de números con duplicados. Luego, conviértela a un conjunto y a una tupla, y observa la diferencia en la salida.
+**Paso 1.** Crea una lista de números con duplicados. Luego, conviértela a un conjunto y a una tupla. Observa la diferencia en la salida.
 
 ```python
 # Pista: Usa las funciones set() y tuple() para las conversiones
@@ -97,13 +97,11 @@ mi_lista = [1, 2, 2, 3, 4, 4, 5]
 
 -----
 
-### **3. NumPy: Operaciones Numéricas Eficientes**
+### Tarea 3. NumPy: operaciones numéricas eficientes
 
 **NumPy** (Numerical Python) es la librería fundamental para la computación numérica. Nos permite trabajar con **arrays** multidimensionales de manera muy rápida, lo que es crucial para el *machine learning*.
 
-#### **Ejercicio**
-
-Multiplica cada elemento del `array` por 5 y luego calcula la suma de ambos *arrays*.
+**Paso 1.** Multiplica cada elemento del *array* por 5 y luego calcula la suma de ambos *arrays*.
 
 ```python
 import numpy as np
@@ -117,9 +115,7 @@ precios_con_envio = precios + precios_con_iva
 print("Suma de ambos arrays:", precios_con_envio)
 ```
 
-#### **Reto**
-
-Crea una matriz 2x2 de NumPy y realiza la multiplicación de matrices con otra matriz 2x2.
+**Paso 2.** Crea una matriz 2x2 de NumPy y realiza la multiplicación de matrices con otra matriz 2x2.
 
 ```python
 # Pista: Usa la función np.dot() o el operador @
@@ -131,13 +127,11 @@ matriz_b = np.array([[5, 6], [7, 8]])
 
 -----
 
-### **4. Pandas: El Poder de los *DataFrames***
+### Tarea 4. Pandas: el poder de los DataFrames
 
 **Pandas** es la librería más utilizada para la manipulación y análisis de datos. Su estructura principal, el **DataFrame**, es similar a una hoja de cálculo, lo que facilita el trabajo con datos estructurados.
 
-#### **Ejercicio**
-
-Carga un `DataFrame` con datos incrustados y filtra las ventas de la región "Norte".
+**Paso 1.** Carga un `DataFrame` con datos incrustados y filtra las ventas de la región "Norte".
 
 ```python
 import pandas as pd
@@ -157,9 +151,7 @@ print("\nDataFrame filtrado por la región Norte:")
 print(ventas_norte)
 ```
 
-#### **Reto**
-
-A partir del `ventas_df`, crea una nueva columna llamada `GananciaNeta` que sea el 20% de la `VentaTotal`, y muestra el `DataFrame` actualizado.
+**Paso 2.** A partir del `ventas_df`, crea una nueva columna llamada `GananciaNeta` que sea el 20 % de la `VentaTotal` y muestra el `DataFrame` actualizado.
 
 ```python
 # Pista: La sintaxis para crear una nueva columna es df['nombre_columna'] = valor
@@ -169,4 +161,5 @@ ventas_df['GananciaNeta'] = ventas_df['VentaTotal'] * 0.20
 ```
 ### Resultado esperado
 ![imagen resultado](../images/Img1.1.jpg)
+
 
