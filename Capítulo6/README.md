@@ -1,27 +1,24 @@
-### 🧠 Práctica 6: Introducción a Redes Neuronales
+# Práctica 6. Introducción a redes neuronales
 
-**Objetivos de la Práctica** 🎯
-
+## Objetivos
+Al finalizar la práctica, serás capaz de: 
   * Conocer los *frameworks* clave de *Deep Learning*: **TensorFlow y Keras**.
   * Comprender los **principios básicos** de una neurona artificial.
   * Entender el rol de las **funciones de activación** y de **costo**.
   * Visualizar el proceso de **retropropagación** (*backpropagation*) y **optimización de parámetros**.
   * Implementar una red neuronal simple desde cero con **NumPy** para consolidar los conceptos.
 
-**Duración aproximada:**
+**Duración aproximada**
 - 60 minutos.
 
-**Tabla de ayuda:**
+## Instrucciones
+Para la ejecución del código, ingresa a https://colab.research.google.com/
 
-Para la ejecución del código ingresar a https://colab.research.google.com/ 
+### Tarea 1. Introducción a *Frameworks* clave: TensorFlow y Keras
 
-### **1. Introducción a *Frameworks* Clave: TensorFlow y Keras**
+**TensorFlow** es una potente librería de código abierto para *Machine Learning* y *Deep Learning*. **Keras** es una API de alto nivel que se ejecuta sobre TensorFlow, diseñada para hacer que la construcción de modelos sea más rápida y sencilla. Juntos, permiten prototipar y desplegar redes neuronales con facilidad.
 
-**TensorFlow** es una potente librería de código abierto para *machine learning* y *deep learning*. **Keras** es una API de alto nivel que se ejecuta sobre TensorFlow, diseñada para hacer que la construcción de modelos sea más rápida y sencilla. Juntos, permiten prototipar y desplegar redes neuronales con facilidad.
-
-#### **Ejercicio:**
-
-Crea un modelo de red neuronal simple con Keras para clasificar el conjunto de datos de Iris.
+**Paso 1.** Crea un modelo de red neuronal simple con Keras para clasificar el conjunto de datos de Iris.
 
 ```python
 import tensorflow as tf
@@ -63,7 +60,7 @@ loss, accuracy = modelo.evaluate(X_test, y_test_one_hot, verbose=0)
 print(f"Precisión del modelo en el conjunto de prueba: {accuracy*100:.2f}%")
 ```
 
-**Reto:** Cambia el número de neuronas en la capa oculta (`Dense`) del modelo de **8 a 16** y el número de épocas de **50 a 100**. ¿Mejora o empeora la precisión del modelo?
+**Paso 2.** Cambia el número de neuronas en la capa oculta (`Dense`) del modelo de **8 a 16** y el número de épocas de **50 a 100**. ¿Mejora o empeora la precisión del modelo?
 
 ```python
 # Pista de código para el reto:
@@ -81,13 +78,11 @@ modelo.fit(X_train, y_train_one_hot, epochs=100, verbose=0)
 
 -----
 
-### **2. La Neurona Artificial: Fundamentos**
+### Tarea 2. La neurona artificial: fundamentos
 
 Una neurona artificial es la unidad fundamental de una red neuronal. Recibe una o más entradas, las combina con un conjunto de **pesos** (*weights*), les aplica un **sesgo** (*bias*), y luego pasa el resultado a través de una **función de activación** para producir una salida.
 
-#### **Ejercicio:**
-
-Simula una neurona artificial simple con NumPy.
+**Paso 1.** Simula una neurona artificial simple con NumPy.
 
 ```python
 import numpy as np
@@ -127,13 +122,11 @@ def sigmoide(x):
 
 -----
 
-### **3. *Backpropagation* y Optimización de Parámetros**
+### Tarea 3. *Backpropagation* y optimización de parámetros
 
-El proceso de *backpropagation* es el corazón del entrenamiento de una red neuronal. Consiste en calcular el **gradiente de la función de costo** con respecto a los pesos y sesgos, y luego usar ese gradiente para **actualizar los parámetros** del modelo y minimizar el error.
+El proceso de *backpropagation* es el corazón del entrenamiento de una red neuronal. Consiste en calcular el **gradiente de la función de costo** con respecto a los pesos y sesgos para, luego, usar ese gradiente para **actualizar los parámetros** del modelo y minimizar el error.
 
-#### **Ejercicio:**
-
-Simula una actualización de peso y sesgo para una neurona simple usando el gradiente.
+**Paso 1.** Simula una actualización de peso y sesgo para una neurona simple usando el gradiente.
 
 ```python
 import numpy as np
@@ -161,7 +154,7 @@ print(f"Peso inicial: {peso:.2f}, Nuevo peso: {nuevo_peso:.2f}")
 print(f"Sesgo inicial: {sesgo:.2f}, Nuevo sesgo: {nuevo_sesgo:.2f}")
 ```
 
-**Reto:** En el ejercicio anterior, realiza un segundo paso de **retropropagación** para ver cómo cambian los parámetros de nuevo.
+**Paso 2.** En el ejercicio anterior, realiza un segundo paso de **retropropagación** para ver cómo cambian los parámetros de nuevo.
 
 ```python
 # Pista de código para el reto:
@@ -181,13 +174,11 @@ print(f"Sesgo inicial: {sesgo:.2f}, Nuevo sesgo: {nuevo_sesgo:.2f}")
 
 -----
 
-### **4. Implementación de una Red Neuronal Simple**
+### Tarea 4. Implementación de una red neuronal simple
 
-Para cerrar la práctica, se implementa una red neuronal de una sola capa desde cero con NumPy, integrando los conceptos de la neurona artificial y *backpropagation*.
+Para cerrar la práctica, implementa una red neuronal de una sola capa desde cero con NumPy, integrando los conceptos de la neurona artificial y *backpropagation*.
 
-#### **Ejercicio:**
-
-Construye una clase `RedNeuronal` para entrenar y predecir datos.
+**Paso 1.** Construye una clase `RedNeuronal` para entrenar y predecir datos.
 
 ```python
 import numpy as np
@@ -231,7 +222,7 @@ print("Resultados de la predicción:")
 print(red_neuronal.predecir(X_train).round(2))
 ```
 
-**Reto:** Modifica el ejercicio para que resuelva el problema de clasificación **AND** en lugar del problema **XOR**.
+**Paso 2.** Modifica el ejercicio para que resuelva el problema de clasificación **AND** en lugar del problema **XOR**.
 
 ```python
 # Pista de código para el reto:
