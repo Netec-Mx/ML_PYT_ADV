@@ -28,7 +28,7 @@ Los cuadernos se componen de **celdas de código** (para escribir Python) y **ce
 
 **Paso 3.** Sube y gestiona archivos desde el panel izquierdo (icono de la carpeta 📂).
 
-**Paso 4.** Haz clic en `Compartir` para trabajar en equipo en el mismo cuaderno.
+**Paso 4.** Haz clic en `Compartir` para colaborar en el mismo cuaderno.
 
 **Paso 5.** Ejecuta la siguiente celda de código en Colab\.
 
@@ -86,10 +86,10 @@ inventario_set = {"Laptop", "Teclado", "Mouse", "Laptop"}
 print(f"Set sin duplicados: {inventario_set}")
 ```
 
-**Paso 1.** Crea una lista de números con duplicados. Luego, conviértela a un conjunto y a una tupla. Observa la diferencia en la salida.
+**Paso 1.** Crea una lista de números con duplicados. Luego, conviértela a un conjunto y una tupla. Observa la diferencia en la salida.
 
 ```python
-# Pista: Usa las funciones set() y tuple() para las conversiones
+# Pista: usa las funciones set() y tuple() para las conversiones
 mi_lista = [1, 2, 2, 3, 4, 4, 5]
 
 # Tu código aquí
@@ -101,7 +101,7 @@ mi_lista = [1, 2, 2, 3, 4, 4, 5]
 
 **NumPy** (Numerical Python) es la librería fundamental para la computación numérica. Nos permite trabajar con **arrays** multidimensionales de manera muy rápida, lo que es crucial para el *Machine Learning*.
 
-**Paso 1.** Multiplica cada elemento del *array* por 5 y luego calcula la suma de ambos *arrays*.
+**Paso 1.** Multiplica cada elemento del *array* por 5 y, luego, suma ambos *arrays*.
 
 ```python
 import numpy as np
@@ -118,7 +118,7 @@ print("Suma de ambos arrays:", precios_con_envio)
 **Paso 2.** Crea una matriz 2x2 de NumPy y realiza la multiplicación de matrices con otra matriz 2x2.
 
 ```python
-# Pista: Usa la función np.dot() o el operador @
+# Pista: usa la función np.dot() o el operador @
 matriz_a = np.array([[1, 2], [3, 4]])
 matriz_b = np.array([[5, 6], [7, 8]])
 
@@ -129,7 +129,7 @@ matriz_b = np.array([[5, 6], [7, 8]])
 
 ### Tarea 4. Pandas: el poder de los DataFrames
 
-**Pandas** es la librería más utilizada para la manipulación y análisis de datos. Su estructura principal, el **DataFrame**, es similar a una hoja de cálculo, lo que facilita el trabajo con datos estructurados.
+**Pandas** es la librería más utilizada para la manipulación y análisis de datos. Su estructura principal, el **DataFrame**, es similar a una hoja de cálculo, lo que facilita el manejo de datos estructurados.
 
 **Paso 1.** Carga un `DataFrame` con datos incrustados y filtra las ventas de la región "Norte".
 
@@ -154,7 +154,7 @@ print(ventas_norte)
 **Paso 2.** A partir del `ventas_df`, crea una nueva columna llamada `GananciaNeta` que sea el 20 % de la `VentaTotal` y muestra el `DataFrame` actualizado.
 
 ```python
-# Pista: La sintaxis para crear una nueva columna es df['nombre_columna'] = valor
+# Pista: para crear una nueva columna la sintaxis es df['nombre_columna'] = valor
 ventas_df['GananciaNeta'] = ventas_df['VentaTotal'] * 0.20
 
 # Tu código aquí
