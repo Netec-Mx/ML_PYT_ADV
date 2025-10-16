@@ -1,10 +1,10 @@
-# Práctica 2.1. Limpieza, transformación y *Feature Engineering*
+# Práctica 2.1. Limpieza, transformación y *feature engineering*
 
 ## Objetivos
 Al finalizar la práctica, serás capaz de:
   * Comprender y aplicar técnicas de **limpieza de datos** para manejar valores nulos y atípicos.
   * Realizar **transformaciones** esenciales como el escalado de datos numéricos y la codificación de variables categóricas.
-  * Crear nuevas variables (*features*) a través del ***Feature Engineering*** para mejorar el rendimiento de los modelos.
+  * Crear nuevas variables (*features*) a través del ***feature engineering*** para mejorar el rendimiento de los modelos.
 
 **Duración aproximada**
 - 60 minutos.
@@ -60,7 +60,7 @@ print(df_ejemplo)
 
 **Transformación de datos: escalado y codificación**
 
-Para que los modelos de *machine learning* funcionen correctamente, los datos a menudo deben transformarse. El **escalado** pone las variables en la misma escala, mientras que la **codificación** convierte variables categóricas en números.
+Para que los modelos de *Machine Learning* funcionen correctamente, los datos a menudo deben transformarse. El **escalado** pone las variables en la misma escala, mientras que la **codificación** convierte variables categóricas en números.
 
 ### Tarea 2. Escalado de datos numéricos
 
@@ -88,7 +88,7 @@ print("DataFrame después del escalado:")
 print(df_scaled)
 ```
 
-**Paso 2.** Codifica la columna `Región` usando ***One-Hot Encoding*** para convertir las categorías en columnas numéricas. Explica por qué esta técnica es útil para el *machine learning*.
+**Paso 2.** Codifica la columna `Región` usando ***One-Hot Encoding*** para convertir las categorías en columnas numéricas. Explica por qué esta técnica es útil para el *Machine Learning*.
 
 ```python
 # Pista de código para el reto:
@@ -101,9 +101,9 @@ print(df_scaled)
 
 -----
 
-**Feature Engineering básico**
+**Feature engineering básico**
 
-El ***Feature Engineering*** es el proceso de crear nuevas variables a partir de las existentes. Una buena *feature* puede mejorar significativamente el rendimiento del modelo.
+El ***feature engineering*** es el proceso de crear nuevas variables a partir de las existentes. Una buena *feature* puede mejorar significativamente el rendimiento del modelo.
 
 ### Tarea 3. Creación de variables derivadas
 
@@ -140,7 +140,7 @@ print(df_fe)
 ### Tarea 4. Reto final de código: ciclo de preprocesamiento completo 
 
 **Descripción del problema**
-Tienes un conjunto de datos desordenado. Tu objetivo es aplicar todo lo aprendido en esta práctica para prepararlo para un modelo de *machine learning*.
+Tienes un conjunto de datos desordenado. Tu objetivo es aplicar todo lo aprendido en esta práctica para prepararlo para un modelo de *Machine Learning*.
 
 
 
@@ -148,7 +148,7 @@ Tienes un conjunto de datos desordenado. Tu objetivo es aplicar todo lo aprendid
 
 **Paso 2.** **Transformación.** Escala la columna `Puntuacion`.
 
-**Paso 3.** **Feature Engineering.** Crea una nueva variable llamada `Puntuacion_log` aplicando el logaritmo natural (`np.log()`) a la columna `Puntuacion`.
+**Paso 3.** **Feature engineering.** Crea una nueva variable llamada `Puntuacion_log` aplicando el logaritmo natural (`np.log()`) a la columna `Puntuacion`.
 
 <!-- end list -->
 
