@@ -1,20 +1,20 @@
-### **Práctica 3.1: Modelos de *Machine Learning* Fundamentales**
+# Práctica 3.1. Modelos de *machine learning* fundamentales
 
-**Objetivos de la Práctica** 🎯
+## Objetivos
+Al finalizar la práctica, serás capaz de:
 
   * Conocer la librería **Scikit-learn**, el pilar del *machine learning* en Python.
-  * Aplicar y comprender modelos de **regresión** (Regresión Lineal) y **clasificación** (Regresión Logística).
-  * Explorar modelos de clasificación más avanzados como **Árboles de Decisión**, **k-NN** y **SVM**.
+  * Aplicar y comprender modelos de **regresión** (regresión lineal) y **clasificación** (regresión logística).
+  * Explorar modelos de clasificación más avanzados como **árboles de decisión**, **k-NN** y **SVM**.
   * Entrenar, predecir y evaluar el rendimiento de los modelos.
 
-**Duración aproximada:**
+**Duración aproximada**
 - 60 minutos.
 
-**Tabla de ayuda:**
+## Instrucciones
+Para la ejecución del código, ingresa a https://colab.research.google.com/
 
-Para la ejecución del código ingresar a https://colab.research.google.com/ 
-
-### **1. Introducción a Scikit-learn**
+#### 1. Introducción a Scikit-learn
 
 **Scikit-learn** es la librería de *machine learning* más popular en Python. Su principal fortaleza es su API consistente, lo que significa que el proceso para usar casi cualquier modelo es el mismo:
 
@@ -26,13 +26,13 @@ Para la ejecución del código ingresar a https://colab.research.google.com/
 
 -----
 
-### **2. Regresión Lineal y Regresión Logística**
+#### 2. Regresión lineal y regresión logística
 
 Estos modelos son la base del *machine learning* supervisado. La **regresión lineal** predice un valor numérico, mientras que la **regresión logística** predice una categoría.
 
-#### **Ejercicio: Regresión Lineal**
+### Tarea 1. Regresión lineal
 
-Entrena un modelo de regresión lineal para predecir la `VentaTotal` basándose en la `Cantidad`.
+**Paso 1.** Entrena un modelo de regresión lineal para predecir la `VentaTotal` basándose en la `Cantidad`.
 
 ```python
 import pandas as pd
@@ -60,7 +60,7 @@ prediccion = modelo_lineal.predict(prediccion_df)
 print(f"Predicción de la VentaTotal para 6 unidades: {prediccion[0]:.2f}")
 ```
 
-**Reto:** Utiliza el modelo de regresión lineal entrenado para predecir la `VentaTotal` de **10** unidades y muestra el resultado.
+**Paso 2.** Utiliza el modelo de regresión lineal entrenado para predecir la `VentaTotal` de **10** unidades y muestra el resultado.
 
 ```python
 # Pista de código para el reto:
@@ -71,9 +71,9 @@ print(f"Predicción de la VentaTotal para 6 unidades: {prediccion[0]:.2f}")
 
 -----
 
-#### **Ejercicio: Regresión Logística**
+### Tarea 2. Regresión logística
 
-Entrena un modelo de regresión logística para predecir si un cliente tiene un `AltoGasto` (Sí/No) basado en su `Edad`.
+**Paso 1.** Entrena un modelo de regresión logística para predecir si un cliente tiene un `AltoGasto` (Sí/No) basado en su `Edad`.
 
 ```python
 import pandas as pd
@@ -100,7 +100,7 @@ prediccion_log = modelo_logistico.predict(prediccion_log_df)
 print(f"Predicción de AltoGasto para un cliente de 40 años: {prediccion_log[0]}")
 ```
 
-**Reto:** Utiliza el modelo de regresión logística entrenado para predecir si un cliente de **20** años tendrá un `AltoGasto`.
+**Paso 2.** Utiliza el modelo de regresión logística entrenado para predecir si un cliente de **20** años tendrá un `AltoGasto`.
 
 ```python
 # Pista de código para el reto:
@@ -111,13 +111,13 @@ print(f"Predicción de AltoGasto para un cliente de 40 años: {prediccion_log[0]
 
 -----
 
-### **3. Árboles de Decisión, k-NN y SVM**
+#### Árboles de decisión, k-NN y SVM
 
-Estos son modelos de clasificación más avanzados y versátiles. El **Árbol de Decisión** toma decisiones secuenciales, **k-NN** clasifica un punto basándose en sus vecinos más cercanos, y **SVM** encuentra la mejor frontera de decisión entre clases.
+Estos son modelos de clasificación más avanzados y versátiles. El **árbol de decisión** toma decisiones secuenciales, **k-NN** clasifica un punto basándose en sus vecinos más cercanos, y **SVM** encuentra la mejor frontera de decisión entre clases.
 
-#### **Ejercicio: Árbol de Decisión**
+### Tarea 3. Árbol de decisión
 
-Entrena un Árbol de Decisión para clasificar el tipo de flor (Iris) basándose en sus medidas.
+**Paso 1.** Entrena un árbol de decisión para clasificar el tipo de flor (Iris) basándose en sus medidas.
 
 ```python
 from sklearn.tree import DecisionTreeClassifier
@@ -141,7 +141,7 @@ prediccion_arbol = arbol_decision.predict(X.iloc[[0]])
 print(f"Predicción para el primer ejemplo: {prediccion_arbol[0]}")
 ```
 
-**Reto:** Usa la función `accuracy_score` para evaluar la precisión del modelo de Árbol de Decisión con el conjunto de datos completo (`X` y `y`).
+**Paso 2.** Usa la función `accuracy_score` para evaluar la precisión del modelo de árbol de decisión con el conjunto de datos completo (`X` y `y`).
 
 ```python
 # Pista de código para el reto:
@@ -153,9 +153,9 @@ print(f"Predicción para el primer ejemplo: {prediccion_arbol[0]}")
 
 -----
 
-#### **Ejercicio: k-NN (k-Nearest Neighbors)**
+### Tarea 4. k-NN (k-Nearest Neighbors)**
 
-Entrena un clasificador k-NN para el mismo dataset de Iris.
+**Paso 1.** Entrena un clasificador k-NN para el mismo dataset de Iris.
 
 ```python
 from sklearn.neighbors import KNeighborsClassifier
@@ -177,7 +177,7 @@ prediccion_knn = k_nn.predict(X.iloc[[0]])
 print(f"Predicción con k-NN para el primer ejemplo: {prediccion_knn[0]}")
 ```
 
-**Reto:** ¿Cómo cambiaría la precisión del modelo si usáramos solo 1 vecino en lugar de 3? Modifica el modelo `k_nn` con `n_neighbors=1` y re-entrénalo para ver el resultado.
+**Paso 2.** ¿Cómo cambiaría la precisión del modelo si usáramos solo 1 vecino en lugar de 3? Modifica el modelo `k_nn` con `n_neighbors=1` y reentrénalo para observar el resultado.
 
 ```python
 # Pista de código para el reto:
@@ -188,9 +188,9 @@ print(f"Predicción con k-NN para el primer ejemplo: {prediccion_knn[0]}")
 
 -----
 
-#### **Ejercicio: SVM (Support Vector Machine)**
+### Tarea 5. SVM (Support Vector Machine)
 
-Entrena un clasificador SVM para el mismo dataset de Iris.
+**Paso 1.** Entrena un clasificador SVM para el mismo dataset de Iris.
 
 ```python
 from sklearn.svm import SVC
@@ -212,7 +212,7 @@ prediccion_svm = svm_model.predict(X.iloc[[0]])
 print(f"Predicción con SVM para el primer ejemplo: {prediccion_svm[0]}")
 ```
 
-**Reto:** El parámetro `C` en `SVC()` controla la penalización por una clasificación incorrecta. Crea un nuevo modelo SVM con `C=100` y re-entrénalo para ver si la predicción para el primer ejemplo cambia.
+**Paso 2.**  El parámetro `C` en `SVC()` controla la penalización por una clasificación incorrecta. Crea un nuevo modelo SVM con `C=100` y re-entrénalo para ver si la predicción para el primer ejemplo cambia.
 
 ```python
 # Pista de código para el reto:
@@ -223,12 +223,13 @@ print(f"Predicción con SVM para el primer ejemplo: {prediccion_svm[0]}")
 
 -----
 
-### **Aclaración sobre los Resultados del Ejercicio 3** 🧠
+**Aclaración sobre los resultados 🧠**
 
-Es normal que las predicciones en los ejercicios de Árbol de Decisión, k-NN y SVM den **0**. Esto se debe a que la primera fila del conjunto de datos de Iris, que es el ejemplo que se utiliza para la predicción, corresponde a la clase de flor `Iris-setosa`, que está codificada numéricamente como **0**.
+Es normal que las predicciones en las tareas 3, 4 y 5 den **0**. Esto se debe a que la primera fila del conjunto de datos de Iris, que es el ejemplo que se utiliza para la predicción, corresponde a la clase de flor `Iris-setosa`, que está codificada numéricamente como **0**.
 
 Cuando un modelo se entrena y luego se le pide que prediga una muestra que ya ha visto, lo más probable es que la clasifique correctamente, produciendo el valor esperado.
 
 ### Resultado esperado
 ![imagen resultado](../images/Img3.1.jpg)
+
 
