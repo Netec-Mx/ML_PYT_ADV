@@ -49,6 +49,8 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
 ### [Práctica 7. Construcción y aplicaciones de redes neuronales](Capítulo7/README.md) 
    - **Descripción**: comprender el diseño y entrenamiento de redes neuronales para un rendimiento óptimo y aplicar los fundamentos de las redes neuronales convolucionales (CNN) en visión por computadora, explorando cómo las convoluciones extraen características de las imágenes.
    - ⏱️ **Duración estimada**: 60 min.
+
+
 ---
 
 ## 📬 **Contacto y más información**
