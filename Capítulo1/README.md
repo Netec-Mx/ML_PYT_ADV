@@ -18,7 +18,7 @@ Para la ejecución del código, ingresa a https://colab.research.google.com/
 
 ### Tarea 1. Introducción al entorno de trabajo: Google Colab
 
-**Google Colab** es un entorno de cuadernos de Jupyter que funciona en la nube. Te permite escribir y ejecutar código Python directamente en tu navegador. Una de sus mayores ventajas es que proporciona acceso gratuito a **GPU**, lo cual es fundamental para el *deep learning*.
+**Google Colab** es un entorno de cuadernos de Jupyter que funciona en la nube. Te permite escribir y ejecutar código Python directamente en tu navegador. Una de sus mayores ventajas es que proporciona acceso gratuito a **GPU**, lo cual es fundamental para el *Deep Learning*.
 
 **Paso 1.** Crea un nuevo cuaderno
 Dirígete a [colab.research.google.com](https://colab.research.google.com) y haz clic en `Archivo` \> `Nuevo cuaderno`.
@@ -99,7 +99,7 @@ mi_lista = [1, 2, 2, 3, 4, 4, 5]
 
 ### Tarea 3. NumPy: operaciones numéricas eficientes
 
-**NumPy** (Numerical Python) es la librería fundamental para la computación numérica. Nos permite trabajar con **arrays** multidimensionales de manera muy rápida, lo que es crucial para el *machine learning*.
+**NumPy** (Numerical Python) es la librería fundamental para la computación numérica. Nos permite trabajar con **arrays** multidimensionales de manera muy rápida, lo que es crucial para el *Machine Learning*.
 
 **Paso 1.** Multiplica cada elemento del *array* por 5 y luego calcula la suma de ambos *arrays*.
 
