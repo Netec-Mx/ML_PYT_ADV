@@ -177,7 +177,7 @@ prediccion_knn = k_nn.predict(X.iloc[[0]])
 print(f"Predicción con k-NN para el primer ejemplo: {prediccion_knn[0]}")
 ```
 
-**Paso 2.** ¿Cómo cambiaría la precisión del modelo si usáramos solo 1 vecino en lugar de 3? Modifica el modelo `k_nn` con `n_neighbors=1` y reentrénalo para observar el resultado.
+**Paso 2.** ¿Cómo cambiaría la precisión del modelo si se utilizara solo un vecino en lugar de tres? Modifica el modelo `k_nn` con `n_neighbors=1` y reentrénalo para observar el resultado.
 
 ```python
 # Pista de código para el reto:
@@ -225,9 +225,9 @@ print(f"Predicción con SVM para el primer ejemplo: {prediccion_svm[0]}")
 
 **Aclaración sobre los resultados 🧠**
 
-Es normal que las predicciones en las tareas 3, 4 y 5 den **0**. Esto se debe a que la primera fila del conjunto de datos de Iris, que es el ejemplo que se utiliza para la predicción, corresponde a la clase de flor `Iris-setosa`, que está codificada numéricamente como **0**.
+Es normal que las predicciones en las tareas 3, 4 y 5 den **0**. Esto ocurre porque la primera fila del conjunto de datos de Iris, que es el ejemplo que se utiliza para la predicción, corresponde a la clase de flor `Iris-setosa`, que está codificada numéricamente como **0**.
 
-Cuando un modelo se entrena y luego se le pide que prediga una muestra que ya ha visto, lo más probable es que la clasifique correctamente, produciendo el valor esperado.
+Cuando un modelo se entrena y luego se le pide que prediga una muestra que ya ha visto; por lo tanto, lo más probable es que la clasifique correctamente y produzca el valor esperado.
 
 ### Resultado esperado
 ![imagen resultado](../images/Img3.1.jpg)
