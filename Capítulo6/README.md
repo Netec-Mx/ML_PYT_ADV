@@ -2,11 +2,11 @@
 
 ## Objetivos
 Al finalizar la práctica, serás capaz de: 
-  * Conocer los *frameworks* clave de *Deep Learning*: **TensorFlow y Keras**.
+  * Conocer los *frameworks* clave de Deep Learning: **TensorFlow y Keras**.
   * Comprender los **principios básicos** de una neurona artificial.
   * Entender el rol de las **funciones de activación** y de **costo**.
-  * Visualizar el proceso de **retropropagación** (*backpropagation*) y **optimización de parámetros**.
-  * Implementar una red neuronal simple desde cero con **NumPy** para consolidar los conceptos.
+  * Visualizar el proceso de **retropropagación** (*backpropagation*) y la **optimización de parámetros**.
+  * Implementar desde cero una red neuronal simple con **NumPy** para consolidar los conceptos.
 
 **Duración aproximada**
 - 60 minutos.
@@ -14,9 +14,9 @@ Al finalizar la práctica, serás capaz de:
 ## Instrucciones
 Para la ejecución del código, ingresa a https://colab.research.google.com/
 
-### Tarea 1. Introducción a *Frameworks* clave: TensorFlow y Keras
+### Tarea 1. Introducción a Frameworks clave: TensorFlow y Keras
 
-**TensorFlow** es una potente librería de código abierto para *Machine Learning* y *Deep Learning*. **Keras** es una API de alto nivel que se ejecuta sobre TensorFlow, diseñada para hacer que la construcción de modelos sea más rápida y sencilla. Juntos, permiten prototipar y desplegar redes neuronales con facilidad.
+**TensorFlow** es una potente librería de código abierto para Machine Learning y Deep Learning. **Keras** es una API de alto nivel que se ejecuta sobre TensorFlow, diseñada para hacer que la construcción de modelos sea más rápida y sencilla. Juntos, permiten prototipar y desplegar redes neuronales con facilidad.
 
 **Paso 1.** Crea un modelo de red neuronal simple con Keras para clasificar el conjunto de datos de Iris.
 
@@ -40,7 +40,7 @@ X_test = scaler.transform(X_test)
 y_train_one_hot = keras.utils.to_categorical(y_train, num_classes=3)
 y_test_one_hot = keras.utils.to_categorical(y_test, num_classes=3)
 
-# 1. Construir un modelo secuencial (ajustado para evitar la advertencia)
+# 1. Construir un modelo secuencial (ajustado para evitar advertencias)
 modelo = keras.Sequential([
     keras.Input(shape=(4,)),
     keras.layers.Dense(8, activation='relu'),
