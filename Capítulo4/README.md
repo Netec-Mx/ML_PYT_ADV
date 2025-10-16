@@ -1,6 +1,6 @@
 # Práctica 4. Fundamentos de aprendizaje no supervisado
 
-¡Te damos la bienvenida a la práctica sobre el aprendizaje no supervisado! 
+Te damos la bienvenida a la práctica sobre el aprendizaje no supervisado.
 Aquí explorarás cómo descubrir patrones ocultos en los datos sin la ayuda de etiquetas.
 
 
@@ -19,7 +19,7 @@ Para la ejecución del código, ingresa a https://colab.research.google.com/
 
 ### Tarea 1. Preprocesamiento avanzado y estructura de datos
 
-En el aprendizaje no supervisado, el preprocesamiento es crucial porque los algoritmos como K-Means se basan en la distancia entre los puntos. Si las características tienen escalas muy diferentes, aquellas con valores más grandes dominarán la distancia, afectando los resultados.
+En el aprendizaje no supervisado, el preprocesamiento es crucial porque los algoritmos como K-Means se basan en la distancia entre los puntos. Si las características tienen escalas muy diferentes, aquellas con valores más grandes dominarán el cálculo de distancias, afectando los resultados.
 
 Las técnicas principales son:
 
@@ -95,7 +95,7 @@ plt.legend()
 plt.show()
 ```
 
-**Paso 2.** Elige el número de clústeres óptimo para el conjunto de datos de ejemplo utilizando el **método del codo (*elbow method*)**.
+**Paso 2.** Determina el número de clústeres óptimo para el conjunto de datos de ejemplo utilizando el **método del codo (*elbow method*)**.
 
 ```python
 # Pista de código para el reto:
@@ -115,7 +115,7 @@ for k in range(1, 11):
 La reducción de dimensionalidad es crucial para visualizar y procesar conjuntos de datos con muchas características.
 
   * **Análisis de componentes principales (PCA)**. Una técnica lineal que transforma los datos a un nuevo espacio de menor dimensión, preservando la mayor varianza posible.
-  * ** t-Distributed Stochastic Neighbor Embedding (t-SNE)**. Una técnica no lineal excelente para visualizar datos de alta dimensión, ya que prioriza la preservación de las distancias locales.
+  * ** t-Distributed Stochastic Neighbor Embedding (t-SNE)**. Una técnica no lineal especialmente útil para visualizar datos de alta dimensión, ya que prioriza la preservación de las distancias locales.
 
 **Paso 1.** Aplica PCA para reducir la dimensionalidad del conjunto de datos de Iris a 2 componentes.
 
@@ -202,7 +202,7 @@ plt.show()
 
 ### Tarea 5. Evaluación y validación (coeficiente de silueta)
 
-Evaluar modelos de clustering es un desafío, ya que no hay etiquetas reales. El **coeficiente de silueta** mide qué tan bien agrupado está un punto dentro de su clúster. Un valor cercano a **1** indica que el punto está bien agrupado, cerca de **0** indica que se encuentra en la frontera entre dos clústeres y cerca de **-1** indica que se ha asignado al clúster incorrecto.
+Evaluar modelos de clustering representa un desafío, debido a la ausencia de etiquetas reales. El **coeficiente de silueta** mide qué tan bien agrupado está un punto dentro de su clúster. Un valor cercano a **1** indica que el punto está correctamente agrupado, cerca de **0** indica que se encuentra en la frontera entre dos clústeres y cerca de **-1** indica que se ha asignado al clúster incorrecto.
 
 **Paso 1.** Calcula el coeficiente de silueta para el modelo de K-Means del ejercicio 2.
 
