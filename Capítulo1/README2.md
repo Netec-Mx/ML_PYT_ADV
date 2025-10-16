@@ -22,7 +22,7 @@ La **visualización** es un paso crucial en el análisis de datos. Te ayudará a
 **Matplotlib** es la librería más popular para crear gráficos en Python. Permite tener un control total sobre cada elemento del gráfico.
 
 ### Tarea 1
-**Paso 1.** Usa un `DataFrame` con datos de ventas para crear un **gráfico de barras** que muestre la venta total por cada producto.
+**Paso 1.** Utiliza un `DataFrame` con datos de ventas para crear un **gráfico de barras** que muestre la venta total por cada producto.
 
 ```python
 import pandas as pd
@@ -91,7 +91,7 @@ plt.show()
 ```python
 # Pista: Usa sns.barplot()
 # Los datos ya están listos en ventas_df
-# Seaborn calculará automáticamente el promedio si se lo indicas
+# Seaborn calculará automáticamente el promedio si se se indica correctamente
 
 # Tu código aquí
 ```
