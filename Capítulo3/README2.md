@@ -131,7 +131,7 @@ print(f"Ecuación del modelo: Precio = {intercepto:.2f} + {coeficiente:.2f} * Ta
 print("-" * 50)
 print(f"Interpretación:")
 print(f"- El precio base de una vivienda (Tamanio_m2=0) es de ${intercepto:.2f}.")
-print(f"- Por cada metro cuadrado adicional, el precio aumenta en ${coeficiente:.2f}.")
+print(f"- Por cada metro cuadrado adicional, se estima que el precio aumenta en ${coeficiente:.2f}.")
 ```
 
 **Paso 2.** Reentrena el modelo de regresión lineal, pero esta vez con un nuevo conjunto de datos donde el tamaño está en pies cuadrados. Interpreta el nuevo coeficiente y compáralo con el anterior.
