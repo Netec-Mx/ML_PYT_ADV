@@ -16,7 +16,7 @@ Para la ejecución del código, ingresa a https://colab.research.google.com/
 
 El **Análisis exploratorio de datos (EDA)** es un paso clave para entender las características de un conjunto de datos. Las visualizaciones nos permiten identificar patrones, tendencias y la distribución de las variables.
 
-**Paso 1.** Usa un conjunto de datos simple para visualizar la relación entre `Edad` y `VentaTotal`, diferenciando a los clientes por su `Estado` (`Activo/Inactivo`).
+**Paso 1.** Utiliza un conjunto de datos simple para visualizar la relación entre `Edad` y `VentaTotal`, diferenciando a los clientes por su `Estado` (`Activo/Inactivo`).
 
 ```python
 import pandas as pd
@@ -52,10 +52,10 @@ plt.show()
 
 ### Tarea 2. Separación *train/test* y validación cruzada
 
-Antes de entrenar un modelo, debes dividir nuestros datos para evaluar su rendimiento de forma objetiva.
+Antes de entrenar un modelo, debes dividir los datos para evaluar su rendimiento de forma objetiva.
 
-  * **División *Train/Test***. Separa el conjunto de datos en dos partes. El **conjunto de entrenamiento** se usa para que el modelo aprenda y el **conjunto de prueba** se usa para evaluar su rendimiento en datos que nunca ha visto. Esto previene el sobreajuste (*overfitting*).
-  * **Validación Cruzada (*Cross-Validation*)**. Es una técnica más robusta para evaluar un modelo. En lugar de una sola división, el conjunto de datos se divide en `k` particiones (*folds*). El modelo se entrena `k` veces, usando un *fold* diferente como conjunto de prueba en cada iteración. El rendimiento final es el promedio de todas las evaluaciones. Esto reduce la varianza de la evaluación.
+  * **División *Train/Test***. Separa el conjunto de datos en dos partes. El **conjunto de entrenamiento** se usa para que el modelo aprenda y el **conjunto de prueba** se usa para evaluar su rendimiento en datos que nunca ha visto. Esto ayuda a prevenir el sobreajuste (*overfitting*).
+  * **Validación Cruzada (*Cross-Validation*)**. Es una técnica más robusta para evaluar un modelo. En lugar de una sola división, el conjunto de datos se divide en `k` particiones (*folds*). El modelo se entrena `k` veces, usando un *fold* diferente como conjunto de prueba en cada iteración. El rendimiento final se calcula como el promedio de todas las evaluaciones. Esto reduce la varianza de la evaluación.
 
 **Paso 1.** Divide el *DataFrame* en un conjunto de entrenamiento y uno de prueba usando una proporción de 80/20.
 
@@ -78,7 +78,7 @@ print("Forma del conjunto de entrenamiento (X_train):", X_train.shape)
 print("Forma del conjunto de prueba (X_test):", X_test.shape)
 ```
 
-**Paso 2.** Realiza una validación cruzada de 3 *folds* utilizando un clasificador `LogisticRegression` sobre el *DataFrame* `X` e `y` definidos en el ejercicio. Imprime el promedio de la precisión de la validación cruzada.
+**Paso 2.** Realiza una validación cruzada de 3 *folds* utilizando un clasificador `LogisticRegression` sobre el *DataFrame* `X` e `y` definidos en el ejercicio. Muestra el promedio de la precisión de la validación cruzada.
 
 ```python
 # Pista de Código para el Reto:
