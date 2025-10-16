@@ -1,25 +1,22 @@
-### 📊 Práctica 2.2: Análisis Exploratorio y Preparación de Datos
+# Práctica 2.2. Análisis exploratorio y preparación de datos
 
-### **Objetivos**
-
+## Objetivos
+Al finalizar la práctica, serás capaz de:
   * Realizar un **análisis exploratorio de datos (EDA)** utilizando visualizaciones.
   * Comprender la importancia de dividir los datos en conjuntos de **entrenamiento y prueba**.
   * Conocer el concepto de **validación cruzada** para evaluar modelos de manera robusta.
 
-**Duración aproximada:**
+**Duración aproximada**
 - 60 minutos.
 
-**Tabla de ayuda:**
+## Instrucciones
+Para la ejecución del código, ingresa a https://colab.research.google.com/
 
-Para la ejecución del código ingresar a https://colab.research.google.com/ 
+### Tarea 1. Análisis exploratorio con visualizaciones
 
-### **1. Análisis Exploratorio con Visualizaciones**
+El **Análisis exploratorio de datos (EDA)** es un paso clave para entender las características de un conjunto de datos. Las visualizaciones nos permiten identificar patrones, tendencias y la distribución de las variables.
 
-El **Análisis Exploratorio de Datos (EDA)** es un paso clave para entender las características de un conjunto de datos. Las visualizaciones nos permiten identificar patrones, tendencias y la distribución de las variables.
-
-#### **Ejercicio:**
-
-Usa un conjunto de datos simple para visualizar la relación entre `Edad` y `VentaTotal`, diferenciando a los clientes por su `Estado` (Activo/Inactivo).
+**Paso 1.** Usa un conjunto de datos simple para visualizar la relación entre `Edad` y `VentaTotal`, diferenciando a los clientes por su `Estado` (`Activo/Inactivo`).
 
 ```python
 import pandas as pd
@@ -41,28 +38,26 @@ plt.ylabel('Venta Total')
 plt.show()
 ```
 
-**Reto:** Crea un **histograma** que muestre la distribución de la `VentaTotal` y un **gráfico de caja** (*boxplot*) que visualice la distribución de las ventas para cada `Estado`.
+**Paso 2.** Crea un **histograma** que muestre la distribución de la `VentaTotal` y un **gráfico de caja** (*boxplot*) que visualice la distribución de las ventas para cada `Estado`.
 
 ```python
-# Pista de Código para el Reto:
-# Pista 1: Usa sns.histplot() o plt.hist() para el histograma.
-# Pista 2: Usa sns.boxplot() para el gráfico de caja.
+# Pista de código para el reto:
+# Pista 1. Usa sns.histplot() o plt.hist() para el histograma.
+# Pista 2. Usa sns.boxplot() para el gráfico de caja.
 
 # Tu código aquí
 ```
 
 -----
 
-### **2. Separación *Train/Test* y Validación Cruzada**
+### Tarea 2. Separación *train/test* y validación cruzada
 
-Antes de entrenar un modelo, debemos dividir nuestros datos para evaluar su rendimiento de forma objetiva.
+Antes de entrenar un modelo, debes dividir nuestros datos para evaluar su rendimiento de forma objetiva.
 
-  * **División *Train/Test***: Separa el conjunto de datos en dos partes. El **conjunto de entrenamiento** se usa para que el modelo aprenda, y el **conjunto de prueba** se usa para evaluar su rendimiento en datos que nunca ha visto. Esto previene el sobreajuste (*overfitting*).
-  * **Validación Cruzada (*Cross-Validation*)**: Es una técnica más robusta para evaluar un modelo. En lugar de una sola división, el conjunto de datos se divide en `k` particiones (*folds*). El modelo se entrena `k` veces, usando un *fold* diferente como conjunto de prueba en cada iteración. El rendimiento final es el promedio de todas las evaluaciones. Esto reduce la varianza de la evaluación.
+  * **División *Train/Test***. Separa el conjunto de datos en dos partes. El **conjunto de entrenamiento** se usa para que el modelo aprenda y el **conjunto de prueba** se usa para evaluar su rendimiento en datos que nunca ha visto. Esto previene el sobreajuste (*overfitting*).
+  * **Validación Cruzada (*Cross-Validation*)**. Es una técnica más robusta para evaluar un modelo. En lugar de una sola división, el conjunto de datos se divide en `k` particiones (*folds*). El modelo se entrena `k` veces, usando un *fold* diferente como conjunto de prueba en cada iteración. El rendimiento final es el promedio de todas las evaluaciones. Esto reduce la varianza de la evaluación.
 
-#### **Ejercicio:**
-
-Divide el *DataFrame* en un conjunto de entrenamiento y uno de prueba usando una proporción de 80/20.
+**Paso 1.** Divide el *DataFrame* en un conjunto de entrenamiento y uno de prueba usando una proporción de 80/20.
 
 ```python
 from sklearn.model_selection import train_test_split
@@ -83,16 +78,15 @@ print("Forma del conjunto de entrenamiento (X_train):", X_train.shape)
 print("Forma del conjunto de prueba (X_test):", X_test.shape)
 ```
 
-**Reto:** Realiza una validación cruzada de 3 *folds* utilizando un clasificador `LogisticRegression` sobre el *DataFrame* `X` e `y` definidos en el ejercicio. Imprime el promedio de la precisión de la validación cruzada.
+**Paso 2.** Realiza una validación cruzada de 3 *folds* utilizando un clasificador `LogisticRegression` sobre el *DataFrame* `X` e `y` definidos en el ejercicio. Imprime el promedio de la precisión de la validación cruzada.
 
 ```python
 # Pista de Código para el Reto:
-# Pista 1: Importa cross_val_score y LogisticRegression.
-# Pista 2: Define el modelo y luego usa cross_val_score.
-# Pista 3: cross_val_score(modelo, X, y, cv=3, scoring='accuracy').
+# Pista 1. Importa cross_val_score y LogisticRegression.
+# Pista 2. Define el modelo y luego usa cross_val_score.
+# Pista 3. cross_val_score(modelo, X, y, cv=3, scoring='accuracy').
 
 # Tu código aquí
 ```
 ### Resultado esperado
 ![imagen resultado](../images/Img2.2.jpg)
-
