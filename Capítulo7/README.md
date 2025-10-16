@@ -19,7 +19,7 @@ Para la ejecución del código, ingresa a https://colab.research.google.com/
 En esta sección, te centrarás en los aspectos prácticos de la construcción de modelos, utilizando el conjunto de datos de la moda de **Fashion-MNIST**. Este *dataset* es ideal para la clasificación de imágenes a pequeña escala y consta de 10 categorías de prendas de vestir. 
 En este ejercicio, construirás una red neuronal densa, donde cada neurona está conectada a todas las neuronas de la capa anterior.
 
-Para usar las imágenes de Fashion-MNIST en una red densa, primero se **aplanan** la cuadrícula de píxeles (28x28) en un solo vector de 784 píxeles. Esto permite que el modelo procese la imagen como una secuencia de números. Las capas subsiguientes (`Dense`) aprenden a reconocer patrones en estos datos aplanados para clasificar la prenda.
+Para usar las imágenes de Fashion-MNIST en una red densa, primero se **aplana** la cuadrícula de píxeles (28x28) en un solo vector de 784 píxeles. Esto permite al modelo procesar la imagen como una secuencia de números. Las capas subsiguientes (`Dense`) aprenden a reconocer patrones en estos datos aplanados para clasificar la prenda.
 
 **Paso 1.** Diseña y entrena una red neuronal con múltiples capas para clasificar las diez categorías de imágenes en el conjunto de datos de Fashion-MNIST.
 
@@ -63,7 +63,7 @@ print(f"\nPrecisión en el conjunto de prueba: {test_acc*100:.2f}%")
 # Pista de código para el reto:
 # Para agregar la nueva capa, necesitas insertar una línea de código en la lista de capas dentro de keras.Sequential.
 # Piensa dónde sería más lógico colocar la nueva capa de 64 neuronas para que la información fluya correctamente a través del modelo.
-# Por lo general, las capas se colocan de mayor a menor tamaño para permitir un aprendizaje progresivo de las características.
+# Generalmente, las capas se organizan de mayor a menor tamaño para permitir un aprendizaje progresivo de las características.
 
 # Pista: completa la lista de capas.
 modelo_fashion_reto = keras.Sequential([
@@ -82,7 +82,7 @@ modelo_fashion_reto = keras.Sequential([
 
 ### Tarea 2. Fundamentos de redes convolucionales (CNN)
 
-Las CNN son un tipo de red neuronal especializado para procesar datos con una topología conocida, como las imágenes. A diferencia de las redes densas, que aplanan la imagen, las CNN trabajan directamente con la cuadrícula de píxeles, utilizando operaciones de **convolución** para escanear la imagen y detectar patrones como bordes, texturas y formas. Una **capa de pooling** se usa para reducir la dimensionalidad y hacer el modelo más eficiente. Juntas, estas operaciones crean una representación jerárquica de la imagen que es muy efectiva.
+Las CNN son un tipo de red neuronal especializada para procesar datos con una topología conocida, como las imágenes. A diferencia de las redes densas, que aplanan la imagen, las CNN trabajan directamente con la cuadrícula de píxeles, utilizando operaciones de **convolución** para escanear la imagen y detectar patrones como bordes, texturas y formas. Una **capa de pooling** se usa para reducir la dimensionalidad y hacer el modelo más eficiente. En conjunto, estas operaciones crean una representación jerárquica de la imagen que es muy efectiva.
 
 En este ejercicio, construirás una CNN simple para ver cómo este enfoque mejora la precisión en la clasificación de imágenes en comparación con la red densa del ejercicio anterior.
 
@@ -131,7 +131,7 @@ print(f"\nPrecisión de la CNN en el conjunto de prueba: {test_acc_cnn*100:.2f}%
 # Pista de código para el reto:
 # Para este reto, tu objetivo es hacer que el modelo sea más profundo para ver si puede aprender características más complejas.
 # Esto se logra apilando capas de convolución y pooling antes de la capa Flatten.
-# Recuerda que cada capa de convolución crea más feature maps o mapas de características
+# Recuerda que cada capa de convolución genera más mapas de características (feature maps)
 # (a menudo se duplica el número de filtros) para que el modelo pueda aprender de forma más granular.
 
 # Pista: completa la secuencia de capas.
