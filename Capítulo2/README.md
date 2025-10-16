@@ -14,7 +14,7 @@ Para la ejecución del código, ingresa a https://colab.research.google.com/
 
 **Limpieza de datos: nulos y *Outliers***
 
-Antes de analizar los datos, es vital asegurarte de que estén limpios. Los **valores nulos** (`NaN`) y los **valores atípicos** (*outliers*) pueden sesgar los resultados.
+Antes de analizar los datos, es fundamental asegurarse de que estén limpios. Los **valores nulos** (`NaN`) y los **valores atípicos** (*outliers*) pueden sesgar los resultados.
 
 ### Tarea 1. Gestión de valores nulos
 
@@ -51,7 +51,7 @@ print(df_ejemplo)
 # Pista de Código para el Reto:
 # Pista 1. El método .median() te dará la mediana de una columna.
 # Pista 2. El método .fillna() es el mismo que se usó para las ventas.
-# Pista 3. La mediana es más robusta frente a valores atípicos.
+# Pista 3. La mediana es más robusta ante valores atípicos.
 
 # Tu código aquí
 ```
@@ -60,7 +60,7 @@ print(df_ejemplo)
 
 **Transformación de datos: escalado y codificación**
 
-Para que los modelos de *Machine Learning* funcionen correctamente, los datos a menudo deben transformarse. El **escalado** pone las variables en la misma escala, mientras que la **codificación** convierte variables categóricas en números.
+Para que los modelos de Machine Learning funcionen correctamente, los datos a menudo deben transformarse. El **escalado** pone las variables en la misma escala, mientras que la **codificación** convierte variables categóricas en números.
 
 ### Tarea 2. Escalado de datos numéricos
 
@@ -88,13 +88,13 @@ print("DataFrame después del escalado:")
 print(df_scaled)
 ```
 
-**Paso 2.** Codifica la columna `Región` usando ***One-Hot Encoding*** para convertir las categorías en columnas numéricas. Explica por qué esta técnica es útil para el *Machine Learning*.
+**Paso 2.** Codifica la columna `Región` usando ***One-Hot Encoding*** para convertir las categorías en columnas numéricas. Explica por qué esta técnica es útil para el Machine Learning.
 
 ```python
 # Pista de código para el reto:
 # Pista 1. Pandas tiene una función muy útil para esto: pd.get_dummies().
 # Pista 2. La técnica de One-Hot Encoding crea una nueva columna por cada categoría.
-# Pista 3. Los modelos de ML no pueden trabajar directamente con texto.
+# Pista 3. Los modelos de ML no pueden procesar texto directamente.
 
 # Tu código aquí
 ```
@@ -103,7 +103,7 @@ print(df_scaled)
 
 **Feature engineering básico**
 
-El ***feature engineering*** es el proceso de crear nuevas variables a partir de las existentes. Una buena *feature* puede mejorar significativamente el rendimiento del modelo.
+El ***feature engineering*** es el proceso de crear nuevas variables a partir de las existentes. Una buena característica (*feature*) puede mejorar significativamente el rendimiento del modelo.
 
 ### Tarea 3. Creación de variables derivadas
 
@@ -140,7 +140,7 @@ print(df_fe)
 ### Tarea 4. Reto final de código: ciclo de preprocesamiento completo 
 
 **Descripción del problema**
-Tienes un conjunto de datos desordenado. Tu objetivo es aplicar todo lo aprendido en esta práctica para prepararlo para un modelo de *Machine Learning*.
+Tienes un conjunto de datos desordenado. Tu objetivo es aplicar todo lo aprendido en esta práctica para prepararlo para un modelo de Machine Learning.
 
 
 
@@ -148,7 +148,7 @@ Tienes un conjunto de datos desordenado. Tu objetivo es aplicar todo lo aprendid
 
 **Paso 2.** **Transformación.** Escala la columna `Puntuacion`.
 
-**Paso 3.** **Feature engineering.** Crea una nueva variable llamada `Puntuacion_log` aplicando el logaritmo natural (`np.log()`) a la columna `Puntuacion`.
+**Paso 3.** **Feature engineering.** Crea una nueva variable llamada `Puntuacion_log`, aplicando el logaritmo natural (`np.log()`) a la columna `Puntuacion`.
 
 <!-- end list -->
 
