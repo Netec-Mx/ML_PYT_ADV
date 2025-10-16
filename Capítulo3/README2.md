@@ -1,25 +1,26 @@
-### **Práctica 3.2: Evaluación e Interpretación de Modelos**
+# Práctica 3.2. Evaluación e interpretación de modelos
 
-**Objetivos de la Práctica** 🎯
-
+## Objetivos
+Al finalizar la práctica, serás capaz de:
   * Comprender las principales **métricas de evaluación** para modelos de regresión y clasificación.
   * Aprender a calcular y usar métricas como **`accuracy`**, **`precision`**, **`recall`**, **`F1-score`**, **`R²`**, **`MAE`** y **`MSE`**.
   * Realizar una **interpretación básica** de los resultados de un modelo de regresión lineal.
 
-**Duración aproximada:**
+**Duración aproximada**
 - 60 minutos.
 
-**Tabla de ayuda:**
+## Instrucciones
+Para la ejecución del código, ingresa a https://colab.research.google.com/
 
-Para la ejecución del código ingresar a https://colab.research.google.com/ 
 
-### **1. Métricas de Evaluación**
 
-Las métricas nos permiten cuantificar qué tan bien se desempeña un modelo. Para la **clasificación**, evaluamos qué tan correctas son las predicciones (por ejemplo, si un email es spam o no). Para la **regresión**, evaluamos qué tan cerca están las predicciones de los valores reales.
+### Tarea 1. Métricas de clasificación (`accuracy`, `precision`, `recall`, `F1-score`)
 
-#### **Ejercicio: Métricas de Clasificación (`accuracy`, `precision`, `recall`, `F1-score`)**
+#### Métricas de evaluación
 
-Usa un modelo de `DecisionTreeClassifier` para clasificar tumores como benignos (0) o malignos (1) y evalúa su rendimiento con varias métricas.
+Las métricas permiten cuantificar qué tan bien se desempeña un modelo. Para la **clasificación**, evalúa qué tan correctas son las predicciones (por ejemplo, si un email es *spam* o no). Para la **regresión**, evalúa qué tan cerca están las predicciones de los valores reales.
+
+**Paso 1.**  Usa un modelo de `DecisionTreeClassifier` para clasificar tumores como benignos (0) o malignos (1) y evalúa su rendimiento con varias métricas.
 
 ```python
 import pandas as pd
@@ -55,7 +56,7 @@ print(f"Recall: {recall:.2f}")
 print(f"F1-score: {f1:.2f}")
 ```
 
-**Reto:** Utiliza la función `confusion_matrix` de `sklearn.metrics` para visualizar los resultados de las predicciones del ejercicio.
+**Paso 2.** Utiliza la función `confusion_matrix` de `sklearn.metrics` para visualizar los resultados de las predicciones del ejercicio.
 
 ```python
 # Pista de código para el reto:
@@ -66,9 +67,9 @@ print(f"F1-score: {f1:.2f}")
 
 -----
 
-#### **Ejercicio: Métricas de Regresión (`R²`, `MAE`, `MSE`)**
+### Tarea 2. Métricas de regresión (`R²`, `MAE`, `MSE`)**
 
-Entrena un modelo de `LinearRegression` para predecir precios de viviendas y evalúa su rendimiento.
+**Paso 1.**  Entrena un modelo de `LinearRegression` para predecir precios de viviendas y evalúa su rendimiento.
 
 ```python
 import pandas as pd
@@ -103,7 +104,7 @@ print(f"MAE (Error absoluto medio): {mae:.2f}")
 print(f"MSE (Error cuadrático medio): {mse:.2f}")
 ```
 
-**Reto:** ¿Cómo cambia el **MSE** si la predicción para la última vivienda (`Tamanio_m2` = 150) es de 320,000 en lugar de 350,000? Reemplaza el valor real con este nuevo dato y vuelve a calcular el MSE.
+**Paso 2.** ¿Cómo cambia el **MSE** si la predicción para la última vivienda (`Tamanio_m2` = 150) es de 320,000 en lugar de 350,000? Reemplaza el valor real con este nuevo dato y vuelve a calcular el MSE.
 
 ```python
 # Pista de código para el reto:
@@ -114,13 +115,11 @@ print(f"MSE (Error cuadrático medio): {mse:.2f}")
 
 -----
 
-### **2. Interpretación Básica de Modelos**
+### Tarea 3. Interpretación básica de modelos
 
 Interpretar un modelo significa entender por qué hace ciertas predicciones. Para la **regresión lineal**, esto es muy sencillo: los **coeficientes** (`.coef_`) y la **intersección** (`.intercept_`) nos indican la relación entre las variables.
 
-#### **Ejercicio:**
-
-Interpreta el modelo de `LinearRegression` del ejercicio anterior para entender cómo el tamaño de la vivienda afecta el precio.
+**Paso 1.** Interpreta el modelo de `LinearRegression` del ejercicio anterior para entender cómo el tamaño de la vivienda afecta el precio.
 
 ```python
 # La intersección (intercept) es el valor de y cuando X es 0
@@ -135,7 +134,7 @@ print(f"- El precio base de una vivienda (Tamanio_m2=0) es de ${intercepto:.2f}.
 print(f"- Por cada metro cuadrado adicional, el precio aumenta en ${coeficiente:.2f}.")
 ```
 
-**Reto:** Reentrena el modelo de regresión lineal, pero esta vez con un nuevo conjunto de datos donde el tamaño está en pies cuadrados. Interpreta el nuevo coeficiente y compáralo con el anterior.
+**Paso 2.** Reentrena el modelo de regresión lineal, pero esta vez con un nuevo conjunto de datos donde el tamaño está en pies cuadrados. Interpreta el nuevo coeficiente y compáralo con el anterior.
 
 ```python
 # Pista de código para el reto:
@@ -146,4 +145,3 @@ print(f"- Por cada metro cuadrado adicional, el precio aumenta en ${coeficiente:
 
 ### Resultado esperado
 ![imagen resultado](../images/Img3.2.jpg)
-
