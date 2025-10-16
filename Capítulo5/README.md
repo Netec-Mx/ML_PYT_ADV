@@ -4,8 +4,8 @@ Te damos la bienvenida a la práctica donde aprenderás los fundamentos para lle
 
 ## Objetivos
 Al finalizar la práctica, serás capaz de:
-  * **Persistir modelos** en memoria para su uso inmediato con `Joblib` y `Pickle`.
-  * Comprender la **lógica de una API** para un modelo sin necesidad de un servidor externo.
+  * **Persistir modelos** en memoria para su uso inmediato mediante `Joblib` y `Pickle`.
+  * Comprender la **lógica de una API** para un modelo sin requerir un servidor externo.
   * Explorar cómo crear una **interfaz de usuario** simple para un modelo.
 
 **Duración aproximada**
@@ -65,7 +65,7 @@ import pickle
 
 ### Tarea 2. Lógica de una API para un modelo
 
-Una **Interfaz de Programación de Aplicaciones (API)** permite que los programas se comuniquen. La lógica de una API que usa un modelo de Machine Learning es simple: recibe datos, los procesa, hace una predicción y devuelve un resultado. Puedes simular esta lógica sin un servidor real.
+Una **interfaz de programación de aplicaciones (API)** permite que los programas se comuniquen. La lógica de una API que usa un modelo de Machine Learning es simple: recibe datos, los procesa, hace una predicción y devuelve un resultado. Puedes simular esta lógica sin un servidor real.
 
 **Paso 1.** Simula un *endpoint* de una API que recibe datos en formato `JSON` y usa el modelo para hacer una predicción.
 
@@ -116,7 +116,7 @@ print("Respuesta de la API simulada:")
 print(respuesta)
 ```
 
-**Paso 2.** Modifica la función `predecir_desde_json` para que, en lugar de un diccionario, devuelva un mensaje de texto.
+**Paso 2.** Modifica la función `predecir_desde_json` para que devuelva un mensaje de texto en lugar de un diccionario.
 
 ```python
 # Pista de código para el reto:
