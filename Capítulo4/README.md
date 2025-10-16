@@ -1,33 +1,32 @@
-### 🕵️ Práctica 4: Fundamentos de Aprendizaje No Supervisado
+# Práctica 4. Fundamentos de aprendizaje no supervisado
 
-¡Bienvenido a la práctica sobre el aprendizaje no supervisado\! Aquí exploraremos cómo descubrir patrones ocultos en los datos sin la ayuda de etiquetas.
+¡Te damos la bienvenida a la práctica sobre el aprendizaje no supervisado! 
+Aquí explorarás cómo descubrir patrones ocultos en los datos sin la ayuda de etiquetas.
 
 
-**Objetivos de la Práctica** 🎯
-
+## Objetivos
+Al finalizar la práctica, serás capaz de:
   * Comprender las técnicas de **preprocesamiento** para datos no supervisados.
   * Aplicar los principales algoritmos de **clustering** y de **reducción de dimensionalidad**.
   * Usar métodos para la **detección de anomalías**.
   * Evaluar y validar los resultados de los modelos no supervisados utilizando métricas clave.
 
-**Duración aproximada:**
+**Duración aproximada**
 - 90 minutos.
 
-**Tabla de ayuda:**
+## Instrucciones
+Para la ejecución del código, ingresa a https://colab.research.google.com/
 
-Para la ejecución del código ingresar a https://colab.research.google.com/ 
-
-### **1. Preprocesamiento Avanzado y Estructura de Datos**
+### Tarea 1. Preprocesamiento avanzado y estructura de datos
 
 En el aprendizaje no supervisado, el preprocesamiento es crucial porque los algoritmos como K-Means se basan en la distancia entre los puntos. Si las características tienen escalas muy diferentes, aquellas con valores más grandes dominarán la distancia, afectando los resultados.
 
 Las técnicas principales son:
 
-  * **Normalización (Min-Max Scaling)**: Escala los datos a un rango específico, generalmente `[0, 1]`.
-  * **Estandarización (Standardization)**: Transforma los datos para que tengan una media de `0` y una desviación estándar de `1`.
+  * **Normalización (Min-Max Scaling)**. Escala los datos a un rango específico, generalmente `[0, 1]`.
+  * **Estandarización (Standardization)**. Transforma los datos para que tengan una media de `0` y una desviación estándar de `1`.
 
-**Ejercicio:**
-Estandariza los datos de un conjunto de ejemplo utilizando `StandardScaler` de Scikit-learn.
+**Paso 1.** Estandariza los datos de un conjunto de ejemplo utilizando `StandardScaler` de Scikit-learn.
 
 ```python
 import pandas as pd
@@ -50,7 +49,7 @@ print("Datos estandarizados:")
 print(df_escalado.head())
 ```
 
-**Reto:** Normaliza el mismo conjunto de datos `df_datos` usando `MinMaxScaler` y muestra los primeros 5 registros.
+**Paso 2.** Normaliza el mismo conjunto de datos `df_datos` usando `MinMaxScaler` y muestra los primeros 5 registros.
 
 ```python
 # Pista de código para el reto:
@@ -62,12 +61,11 @@ from sklearn.preprocessing import MinMaxScaler
 
 -----
 
-### **2. Algoritmos de Clustering: Fundamentos y Aplicaciones**
+### Tarea 2. Algoritmos de clustering: fundamentos y aplicaciones
 
 El **clustering** agrupa puntos de datos similares en conjuntos (clústeres) sin usar etiquetas. El algoritmo de clustering más popular es **K-Means**, que asigna cada punto al centroide más cercano.
 
-**Ejercicio:**
-Aplica el algoritmo K-Means al conjunto de datos estandarizado y visualiza los clústeres resultantes.
+**Paso 1.** Aplica el algoritmo K-Means al conjunto de datos estandarizado y visualiza los clústeres resultantes.
 
 ```python
 import pandas as pd
@@ -97,7 +95,7 @@ plt.legend()
 plt.show()
 ```
 
-**Reto:** Elige el número de clústeres óptimo para el conjunto de datos de ejemplo utilizando el **método del codo (*elbow method*)**.
+**Paso 2.** Elige el número de clústeres óptimo para el conjunto de datos de ejemplo utilizando el **método del codo (*elbow method*)**.
 
 ```python
 # Pista de código para el reto:
@@ -112,15 +110,14 @@ for k in range(1, 11):
 
 -----
 
-### **3. Reducción de Dimensionalidad (PCA y t-SNE)**
+### Tarea 3. Reducción de dimensionalidad (PCA y t-SNE)
 
 La reducción de dimensionalidad es crucial para visualizar y procesar conjuntos de datos con muchas características.
 
-  * **PCA (Análisis de Componentes Principales)**: Una técnica lineal que transforma los datos a un nuevo espacio de menor dimensión, preservando la mayor varianza posible.
-  * **t-SNE (t-Distributed Stochastic Neighbor Embedding)**: Una técnica no lineal que es excelente para visualizar datos de alta dimensión, ya que prioriza la preservación de las distancias locales.
+  * **Análisis de componentes principales (PCA)**. Una técnica lineal que transforma los datos a un nuevo espacio de menor dimensión, preservando la mayor varianza posible.
+  * ** t-Distributed Stochastic Neighbor Embedding (t-SNE)**. Una técnica no lineal excelente para visualizar datos de alta dimensión, ya que prioriza la preservación de las distancias locales.
 
-**Ejercicio:**
-Aplica PCA para reducir la dimensionalidad del conjunto de datos de Iris a 2 componentes.
+**Paso 1.** Aplica PCA para reducir la dimensionalidad del conjunto de datos de Iris a 2 componentes.
 
 ```python
 import pandas as pd
@@ -146,7 +143,7 @@ plt.ylabel('Componente Principal 2')
 plt.show()
 ```
 
-**Reto:** Aplica `t-SNE` al mismo conjunto de datos de Iris y visualiza el resultado. Compara la visualización con la de PCA.
+**Paso 2.** Aplica `t-SNE` al mismo conjunto de datos de Iris y visualiza el resultado. Compara la visualización con la de PCA.
 
 ```python
 # Pista de código para el reto:
@@ -159,12 +156,11 @@ from sklearn.manifold import TSNE
 
 -----
 
-### **4. Detección de Anomalías (Isolation Forest)**
+### Tarea 4. Detección de anomalías (Isolation Forest)
 
 La detección de anomalías es la identificación de eventos o puntos inusuales que no se ajustan a un patrón esperado. `Isolation Forest` es un algoritmo que "aísla" las anomalías en árboles aleatorios, ya que los valores atípicos son más fáciles de separar de la mayoría de los datos.
 
-**Ejercicio:**
-Usa `IsolationForest` para detectar y visualizar anomalías en un conjunto de datos simple.
+**Paso 1.** Usa `IsolationForest` para detectar y visualizar anomalías en un conjunto de datos simple.
 
 ```python
 import pandas as pd
@@ -193,7 +189,7 @@ plt.title('Detección de Anomalías con Isolation Forest')
 plt.show()
 ```
 
-**Reto:** Cambia el parámetro `contamination` de `0.1` a `0.05` y re-ejecuta el código. ¿Qué efecto tiene este cambio en la cantidad de anomalías detectadas?
+**Paso 2.** Cambia el parámetro `contamination` de `0.1` a `0.05` y reejecuta el código. ¿Qué efecto tiene este cambio en la cantidad de anomalías detectadas?
 
 ```python
 # Pista de código para el reto:
@@ -204,12 +200,11 @@ plt.show()
 
 -----
 
-### **5. Evaluación y Validación (Coeficiente de Silueta)**
+### Tarea 5. Evaluación y validación (coeficiente de silueta)
 
-Evaluar modelos de clustering es un desafío, ya que no hay etiquetas reales. El **Coeficiente de Silueta** mide qué tan bien agrupado está un punto dentro de su clúster. Un valor cercano a **1** indica que el punto está bien agrupado; cerca de **0** indica que se encuentra en la frontera entre dos clústeres; y cerca de **-1** indica que ha sido asignado al clúster incorrecto.
+Evaluar modelos de clustering es un desafío, ya que no hay etiquetas reales. El **coeficiente de silueta** mide qué tan bien agrupado está un punto dentro de su clúster. Un valor cercano a **1** indica que el punto está bien agrupado, cerca de **0** indica que se encuentra en la frontera entre dos clústeres y cerca de **-1** indica que se ha asignado al clúster incorrecto.
 
-**Ejercicio:**
-Calcula el Coeficiente de Silueta para el modelo de K-Means del ejercicio 2.
+**Paso 1.** Calcula el coeficiente de silueta para el modelo de K-Means del ejercicio 2.
 
 ```python
 import pandas as pd
@@ -233,7 +228,7 @@ silueta_promedio = silhouette_score(X_scaled, etiquetas_cluster)
 print(f"Coeficiente de Silueta promedio: {silueta_promedio:.2f}")
 ```
 
-**Reto:** ¿Cómo cambia el Coeficiente de Silueta si usas 2 clústeres en lugar de 4? Vuelve a calcular la métrica con `n_clusters=2` y compara el resultado.
+**Paso 2.** ¿Cómo cambia el coeficiente de silueta si usas 2 clústeres en lugar de 4? Vuelve a calcular la métrica con `n_clusters=2` y compara el resultado.
 
 ```python
 # Pista de código para el reto:
