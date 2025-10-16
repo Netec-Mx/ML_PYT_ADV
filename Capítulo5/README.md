@@ -1,27 +1,24 @@
-### 🚀 Práctica 5: Despliegue y Mantenimiento de Modelos
+# Práctica 5. Despliegue y mantenimiento de modelos
 
-¡Bienvenido a la última práctica\! Aquí aprenderás los fundamentos para llevar un modelo de *machine learning* desde el entrenamiento a la producción.
+Te damos la bienvenida a la práctica donde aprenderás los fundamentos para llevar un modelo de *Machine Learning* desde el entrenamiento a la producción.
 
-**Objetivos de la Práctica** 🎯
-
+## Objetivos
+Al finalizar la práctica, serás capaz de:
   * **Persistir modelos** en memoria para su uso inmediato con `Joblib` y `Pickle`.
   * Comprender la **lógica de una API** para un modelo sin necesidad de un servidor externo.
   * Explorar cómo crear una **interfaz de usuario** simple para un modelo.
 
-**Duración aproximada:**
+**Duración aproximada**
 - 60 minutos.
 
-**Tabla de ayuda:**
+## Instrucciones
+Para la ejecución del código, ingresa a https://colab.research.google.com/
 
-Para la ejecución del código ingresar a https://colab.research.google.com/ 
+### Tarea 1. Persistencia de modelos en memoria
 
-### **1. Persistencia de Modelos en Memoria**
+La **persistencia** te permite guardar un modelo entrenado para usarlo después, sin tener que volver a entrenarlo. En este ejercicio, simularás el proceso guardando el modelo en un búfer de memoria (`BytesIO`) en lugar de en un archivo físico.
 
-La **persistencia** te permite guardar un modelo entrenado para usarlo después, sin tener que volver a entrenarlo. En este ejercicio, simularemos el proceso guardando el modelo en un búfer de memoria (`BytesIO`) en lugar de en un archivo físico.
-
-#### **Ejercicio:**
-
-Entrena un modelo y luego guárdalo y cárgalo de un búfer de memoria usando `Joblib`.
+**Paso 1.** Entrena un modelo y luego guárdalo y cárgalo de un búfer de memoria usando `Joblib`.
 
 ```python
 import pandas as pd
@@ -54,25 +51,23 @@ print(f"Predicción del modelo cargado para el primer ejemplo de prueba: {predic
 print(f"Valor real: {y_test[0]}")
 ```
 
-**Reto:** Utiliza la librería `pickle` para guardar y cargar el modelo del ejercicio a un búfer de memoria.
+**Paso 2.** Utiliza la librería `pickle` para guardar y cargar el modelo del ejercicio a un búfer de memoria.
 
 ```python
 # Pista de código para el reto:
 import pickle
-# Pista: Usa el mismo flujo de trabajo: dump -> seek -> load
+# Pista: usa el mismo flujo de trabajo: dump -> seek -> load
 
 # Tu código aquí
 ```
 
 -----
 
-### **2. Lógica de una API para un Modelo**
+### Tarea 2. Lógica de una API para un modelo
 
-Una **API (Interfaz de Programación de Aplicaciones)** permite que los programas se comuniquen. La lógica de una API que usa un modelo de *machine learning* es simple: recibe datos, los procesa, hace una predicción y devuelve un resultado. Puedes simular esta lógica sin un servidor real.
+Una **Interfaz de Programación de Aplicaciones (API)** permite que los programas se comuniquen. La lógica de una API que usa un modelo de Machine Learning es simple: recibe datos, los procesa, hace una predicción y devuelve un resultado. Puedes simular esta lógica sin un servidor real.
 
-#### **Ejercicio:**
-
-Simula un *endpoint* de una API que recibe datos en formato `JSON` y usa el modelo para hacer una predicción.
+**Paso 1.** Simula un *endpoint* de una API que recibe datos en formato `JSON` y usa el modelo para hacer una predicción.
 
 ```python
 import numpy as np
@@ -95,7 +90,7 @@ joblib.dump(modelo, buffer_modelo_api)
 buffer_modelo_api.seek(0)
 # --- Fin del código de persistencia ---
 
-# Ahora, cargamos el modelo desde el búfer para la lógica de la API
+# Ahora, cargar el modelo desde el búfer para la lógica de la API
 modelo_api = joblib.load(buffer_modelo_api)
 
 # Simular una solicitud de datos en formato JSON
@@ -121,24 +116,22 @@ print("Respuesta de la API simulada:")
 print(respuesta)
 ```
 
-**Reto:** Modifica la función `predecir_desde_json` para que, en lugar de un diccionario, devuelva un mensaje de texto.
+**Paso 2.** Modifica la función `predecir_desde_json` para que, en lugar de un diccionario, devuelva un mensaje de texto.
 
 ```python
 # Pista de código para el reto:
-# Pista: Convierte la predicción numérica a una etiqueta de texto (ej. "setosa").
+# Pista: convierte la predicción numérica a una etiqueta de texto (ej. "setosa").
 
 # Tu código aquí
 ```
 
 -----
 
-### **3. Interfaz de Usuario Simple**
+### Tarea 3. Interfaz de usuario simple
 
 Las interfaces de usuario interactivas permiten que las personas interactúen con un modelo de forma sencilla. Puedes simular la lógica de una interfaz simple usando entradas y salidas de texto en el notebook.
 
-#### **Ejercicio:**
-
-Simula una interfaz de usuario que le pida datos al usuario, los use para predecir con el modelo y muestre el resultado.
+**Paso 1.** Simula una interfaz de usuario que le pida datos al usuario, los use para predecir con el modelo y muestre el resultado.
 
 ```python
 import numpy as np
@@ -161,7 +154,7 @@ joblib.dump(modelo, buffer_modelo_ui)
 buffer_modelo_ui.seek(0)
 # --- Fin del código de persistencia ---
 
-# Ahora, cargamos el modelo desde el búfer para la lógica de la UI
+# Ahora, cargar el modelo desde el búfer para la lógica de la UI
 modelo_ui = joblib.load(buffer_modelo_ui)
 
 # Simular la interacción con el usuario (ej. como en Streamlit)
@@ -183,11 +176,11 @@ resultado_ui = etiquetas[prediccion_ui[0]]
 print(f"\nEl modelo predice que la flor es: {resultado_ui}")
 ```
 
-**Reto:** Agrega una validación al código para que si el usuario ingresa un valor negativo, se le muestre un mensaje de error en lugar de hacer la predicción.
+**Paso 2.** Agrega una validación al código para que, si el usuario ingresa un valor negativo, se le muestre un mensaje de error en lugar de hacer la predicción.
 
 ```python
 # Pista de código para el reto:
-# Pista: Usa una sentencia `if` o un bloque `try-except` para verificar la entrada.
+# Pista: usa una sentencia `if` o un bloque `try-except` para verificar la entrada.
 
 # Tu código aquí
 ```
