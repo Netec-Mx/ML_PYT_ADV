@@ -22,7 +22,7 @@ Cada uno de estos laboratorios está diseñado para ofrecerte una experiencia pr
    - **Descripción**: aplicar técnicas de limpieza y transformación de datos para manejar valores nulos, escalar y codificar variables, creando nuevas características mediante Feature Engineering que mejoren el rendimiento de los modelos.
    - ⏱️ **Duración estimada**: 60 min.
 
-### [Práctica 2.2: Análisis exploratorio y preparación de datos](Capítulo2/README2.md) 
+### [Práctica 2.2. Análisis exploratorio y preparación de datos](Capítulo2/README2.md) 
    - **Descripción**: realizar un análisis exploratorio de datos mediante visualizaciones y comprender la importancia de dividir los datos en entrenamiento y prueba, aplicando validación cruzada para evaluar los modelos de forma robusta.
    - ⏱️ **Duración estimada**: 60 min.
 
