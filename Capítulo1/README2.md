@@ -1,33 +1,28 @@
+# Práctica 1.2. Visualización con Matplotlib y Seaborn
 
-### 📈 Práctica 1.2: Visualización con Matplotlib y Seaborn
-
-### **Objetivos**
-
+## Objetivos
+Al finalizar la práctica, serás capaz de:
   * Comprender la importancia de la visualización de datos.
   * Aprender a crear gráficos básicos con **Matplotlib**.
   * Usar **Seaborn** para crear gráficos más avanzados y estéticos.
   * Analizar los datos de un `DataFrame` a través de la visualización.
 
-**Duración aproximada:**
+**Duración aproximada**
 - 60 minutos.
 
-**Tabla de ayuda:**
+## Instrucciones
+Para la ejecución del código, ingresa a https://colab.research.google.com/ 
 
-Para la ejecución del código ingresar a https://colab.research.google.com/ 
+**Introducción a la visualización de datos**
 
-### **1. Introducción a la Visualización de Datos**
+La **visualización** es un paso crucial en el análisis de datos. Te ayudará a entender la distribución, detectar patrones y descubrir relaciones entre variables. Para este ejercicio, usarás dos librerías esenciales: **Matplotlib** y **Seaborn**.
 
-La **visualización** es un paso crucial en el análisis de datos. Nos ayuda a entender la distribución, detectar patrones y descubrir relaciones entre variables. Usaremos dos librerías esenciales: **Matplotlib** y **Seaborn**.
+**Gráficos básicos con Matplotlib**
 
------
+**Matplotlib** es la librería más popular para crear gráficos en Python. Permite tener un control total sobre cada elemento del gráfico.
 
-### **2. Gráficos Básicos con Matplotlib**
-
-**Matplotlib** es la librería más popular para crear gráficos en Python. Nos permite tener un control total sobre cada elemento del gráfico.
-
-#### **Ejercicio**
-
-Usa un `DataFrame` con datos de ventas para crear un **gráfico de barras** que muestre la venta total por cada producto.
+### Tarea 1
+**Paso 1.** Usa un `DataFrame` con datos de ventas para crear un **gráfico de barras** que muestre la venta total por cada producto.
 
 ```python
 import pandas as pd
@@ -52,9 +47,7 @@ plt.grid(axis='y', linestyle='--')
 plt.show()
 ```
 
-#### **Reto**
-
-Crea un **gráfico de pastel** (*pie chart*) para visualizar el porcentaje de la `cantidad` vendida de cada producto.
+**Paso 2.** Crea un **gráfico de pastel** (*pie chart*) para visualizar el porcentaje de la `cantidad` vendida de cada producto.
 
 ```python
 # Pista: Usa el método .pie() de matplotlib.pyplot
@@ -66,13 +59,12 @@ cantidad_por_producto = ventas_df.groupby('Producto')['Cantidad'].sum()
 
 -----
 
-### **3. Gráficos Más Atractivos con Seaborn**
+**Gráficos más atractivos con Seaborn**
 
 **Seaborn** es una librería de alto nivel que simplifica la creación de gráficos estadísticos complejos y estéticos. Es ideal para explorar las relaciones entre variables.
 
-#### **Ejercicio**
-
-Usa el mismo `DataFrame` de ventas para crear un **gráfico de dispersión** que muestre la relación entre la `Cantidad` vendida y la `VentaTotal`.
+### Tarea 2
+**Paso 1.** Usa el mismo `DataFrame` de ventas para crear un **gráfico de dispersión** que muestre la relación entre la `Cantidad` vendida y la `VentaTotal`.
 
 ```python
 import seaborn as sns
@@ -94,9 +86,7 @@ plt.ylabel('Venta Total')
 plt.show()
 ```
 
-#### **Reto**
-
-Crea un **gráfico de barras** utilizando Seaborn para mostrar la `venta total promedio` por producto.
+**Paso 2.** Crea un **gráfico de barras** utilizando Seaborn para mostrar la `venta total promedio` por producto.
 
 ```python
 # Pista: Usa sns.barplot()
