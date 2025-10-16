@@ -1,9 +1,9 @@
-# Práctica 3.1. Modelos de *machine learning* fundamentales
+# Práctica 3.1. Modelos de *Machine Learning* fundamentales
 
 ## Objetivos
 Al finalizar la práctica, serás capaz de:
 
-  * Conocer la librería **Scikit-learn**, el pilar del *machine learning* en Python.
+  * Conocer la librería **Scikit-learn**, el pilar del *Machine Learning* en Python.
   * Aplicar y comprender modelos de **regresión** (regresión lineal) y **clasificación** (regresión logística).
   * Explorar modelos de clasificación más avanzados como **árboles de decisión**, **k-NN** y **SVM**.
   * Entrenar, predecir y evaluar el rendimiento de los modelos.
@@ -16,7 +16,7 @@ Para la ejecución del código, ingresa a https://colab.research.google.com/
 
 #### 1. Introducción a Scikit-learn
 
-**Scikit-learn** es la librería de *machine learning* más popular en Python. Su principal fortaleza es su API consistente, lo que significa que el proceso para usar casi cualquier modelo es el mismo:
+**Scikit-learn** es la librería de *Machine Learning* más popular en Python. Su principal fortaleza es su API consistente, lo que significa que el proceso para usar casi cualquier modelo es el mismo:
 
 1.  **Importar** el modelo.
 2.  **Instanciar** el modelo (`modelo = Modelo()`).
@@ -28,7 +28,7 @@ Para la ejecución del código, ingresa a https://colab.research.google.com/
 
 #### 2. Regresión lineal y regresión logística
 
-Estos modelos son la base del *machine learning* supervisado. La **regresión lineal** predice un valor numérico, mientras que la **regresión logística** predice una categoría.
+Estos modelos son la base del *Machine Learning* supervisado. La **regresión lineal** predice un valor numérico, mientras que la **regresión logística** predice una categoría.
 
 ### Tarea 1. Regresión lineal
 
